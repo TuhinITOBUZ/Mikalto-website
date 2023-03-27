@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+button:hover{
+  color: #05014a !important;
+}
+
 .navbar-subheading {
   font-size: 0.5rem;
 }
@@ -365,7 +369,7 @@ footer hr {
 
   .services-banner > div {
     width: 30%;
-    height: 50vh;
+    height: fit-content;
     position: relative;
     padding: 4rem !important;
     top: 4rem;

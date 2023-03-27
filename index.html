@@ -90,7 +90,10 @@
     </header>
 
     <section class="px-4 py-2">
-      <div id="page-banner" class="page-banner d-flex justify-content-around align-items-center">
+      <div
+        id="page-banner"
+        class="page-banner d-flex justify-content-around align-items-center"
+      >
         <div class="d-flex flex-column p-4 page-banner-heading">
           <h4 class="position-relative text-left display-4 text-light">
             Enjoy your dream vaccation
@@ -115,8 +118,8 @@
           </div>
         </div>
         <form
-          action="/"
-          method="get"
+          onsubmit="handleFormSubmit(e)"
+          id="page-banner-form"
           class="page-banner-form position-relative p-4 d-flex flex-column gap-4 align-items-center justify-content-center"
         >
           <p class="fs-1 text-left deep-blue-color">Search Room</p>
@@ -130,7 +133,12 @@
                 />
                 <label for="" class="deep-blue-color">Checkin*</label>
               </div>
-              <input type="date" class="border-0 border-bottom" required />
+              <input
+                id="check-in"
+                type="date"
+                class="border-0 border-bottom"
+                required
+              />
             </div>
             <div class="form-date-inputs d-flex flex-column">
               <div class="d-flex flex-row">
@@ -140,7 +148,12 @@
                 />
                 <label for="" class="deep-blue-color">Checkout*</label>
               </div>
-              <input type="date" class="border-0 border-bottom" required />
+              <input
+                id="check-out"
+                type="date"
+                class="border-0 border-bottom"
+                required
+              />
             </div>
           </div>
           <div class="w-100 d-flex flex-column">
@@ -189,17 +202,17 @@
       <div class="position-relative w-50 homestay-adds-images">
         <img
           class="homestay1 position-absolute"
-          src="/images/homestays/homestay1.jpeg"
+          id="homestay1"
           alt="homestay"
         />
         <img
           class="homestay2 position-absolute"
-          src="/images/homestays/homestay2.jpeg"
+          id="homestay2"
           alt="homestay"
         />
         <img
           class="homestay3 position-absolute"
-          src="/images/homestays/homestay3.jpeg"
+          id="homestay3"
           alt="homestay"
         />
       </div>
@@ -373,70 +386,47 @@
       </p>
       <div class="w-100 d-flex flex-wrap gap-4 justify-content-center">
         <div class="services d-flex flex-column gap-1 p-4">
-          <img
-            class="w-100"
-            src="/images/services/wellness.jpg"
-            alt="wellness"
-          />
-          <p class="deep-blue-color">WELLNESS</p>
-          <p class="fs-4">Dedicated to wellness</p>
-          <p>
-            Aman's approach to wellness is focused on personalisation , privacy
-            and seclusion. Local spa rituals with indigenous ingredients, offer
-            a profoundly therapeutic touch, and a gentle sense of discovery.
-          </p>
+          <img class="w-100" id="wellnessService" alt="wellness" />
+          <p id="wellnessServiceHeading" class="deep-blue-color"></p>
+          <p id="wellnessServiceSubHeading" class="fs-4"></p>
+          <p id="wellnessServiceDetails"></p>
           <a class="text-decoration-none deep-blue-color" href="#"
             >Discover more →</a
           >
         </div>
         <div class="services d-flex flex-column gap-1 p-4">
-          <img
-            class="w-100"
-            src="/images/services/giftCard.jpg"
-            alt="gift-card"
-          />
-          <p class="deep-blue-color">GIFT CARDS</p>
-          <p class="fs-4">The gift of future travel</p>
-          <p>
-            Share extraordinary experiences with the Aman E-Gift Card - delivery
-            instantly and offering memories that last a lifetime
-          </p>
+          <img class="w-100" id="giftCardService" alt="gift-card" />
+          <p id="giftCardServiceHeading" class="deep-blue-color"></p>
+          <p id="giftCardServiceSubHeading" class="fs-4"></p>
+          <p id="giftCardServiceDetails"></p>
           <a class="text-decoration-none deep-blue-color" href="#"
             >Discover more →</a
           >
         </div>
         <div class="services d-flex flex-column gap-1 p-4">
-          <img class="w-100" src="/images/services/spa.jpg" alt="spa" />
-          <p class="deep-blue-color">MIKALTO SHOP</p>
-          <p class="fs-4">The spa experience from home</p>
-          <p>
-            Skincare and spa supplements harness powerful natural ingredients to
-            provide balance and optimal welbeing.
-          </p>
+          <img class="w-100" id="spaService" alt="spa" />
+          <p id="spaServiceHeading" class="deep-blue-color"></p>
+          <p id="spaServiceSubHeading" class="fs-4"></p>
+          <p id="spaServiceDetails"></p>
           <a class="text-decoration-none deep-blue-color" href="#"
             >Discover more →</a
           >
         </div>
         <div class="services d-flex flex-column gap-1 p-4">
-          <img
-            class="w-100"
-            src="/images/services/adventure.jpg"
-            alt="adventure"
-          />
-          <p class="deep-blue-color">EXPERIENCE</p>
-          <p class="fs-4">Adventure in the wild</p>
-          <p>
-            Skincare and spa supplements harness powerful natural ingredients to
-            provide balance and optimal welbeing.
-          </p>
+          <img class="w-100" id="adventureService" alt="adventure" />
+          <p id="adventureServiceHeading" class="deep-blue-color"></p>
+          <p id="adventureServiceSubHeading" class="fs-4"></p>
+          <p id="adventureServiceDetails"></p>
           <a class="text-decoration-none deep-blue-color" href="#"
             >Discover more →</a
           >
         </div>
       </div>
       <div class="d-flex align-item-center justify-content-center">
-        <button class="btn">
-          <a class="text-decoration-none deep-blue-color p-2" href="#"
+        <button class="btn text-center">
+          <a
+            class="text-decoration-none deep-blue-color p-2 text-center"
+            href="#"
             >View all services</a
           >
         </button>
@@ -591,7 +581,7 @@
             necessitatibus asperiores, illo odio.
           </p>
           <div class="d-flex justify-content-center">
-            <button class="btn px-4">
+            <button class="rounded p-2">
               <a class="text-decoration-none text-light" href="#">Join Us</a>
             </button>
           </div>
@@ -609,7 +599,7 @@
           type="email"
           placeholder="Enter your email addreess ... "
         />
-        <button class="btn p-2">
+        <button class="p-2 rounded">
           <a class="text-decoration-none text-light p-4" href="#">Subscribe</a>
         </button>
       </div>
