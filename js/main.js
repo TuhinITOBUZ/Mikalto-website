@@ -10,6 +10,37 @@ const goPreviousSlide = () => {
   counter = (counter - 1) % 3;
   // console.log(counter);
   slideImage();
+  async function setData() {
+    const response = await fetch(`http://localhost:5000/`)
+    .then(function (res) {
+      return res.json();
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+    if (response.error) {
+      alert(response.error.message);
+    } else { 
+      if (counter === 0){
+        document.getElementById("showRoomHeading").textContent = response.showRooms.standardRoom.heading
+        document.getElementById("showRoomPrice").textContent = response.showRooms.standardRoom.price
+        document.getElementById("showRoomDetails").textContent = response.showRooms.standardRoom.details
+      }
+      else if ( counter === 1){
+        document.getElementById("showRoomHeading").textContent = response.showRooms.dulexRoom.heading
+        document.getElementById("showRoomPrice").textContent = response.showRooms.dulexRoom.price
+        document.getElementById("showRoomDetails").textContent = response.showRooms.dulexRoom.details
+
+      }
+      else if (counter === 2){
+        document.getElementById("showRoomHeading").textContent = response.showRooms.superDulexRoom.heading
+        document.getElementById("showRoomPrice").textContent = response.showRooms.superDulexRoom.price
+        document.getElementById("showRoomDetails").textContent = response.showRooms.superDulexRoom.details
+
+      }
+    }
+  }
+  setData()
 };
 const goNextSlide = () => {
   counter = (counter + 1) % 3;
@@ -27,12 +58,21 @@ const goNextSlide = () => {
       alert(response.error.message);
     } else { 
       if (counter === 0){
-        document.getElementById("showRoomHeading")
+        document.getElementById("showRoomHeading").textContent = response.showRooms.standardRoom.heading
+        document.getElementById("showRoomPrice").textContent = response.showRooms.standardRoom.price
+        document.getElementById("showRoomDetails").textContent = response.showRooms.standardRoom.details
       }
       else if ( counter === 1){
+        document.getElementById("showRoomHeading").textContent = response.showRooms.dulexRoom.heading
+        document.getElementById("showRoomPrice").textContent = response.showRooms.dulexRoom.price
+        document.getElementById("showRoomDetails").textContent = response.showRooms.dulexRoom.details
+
       }
       else if (counter === 2){
-    
+        document.getElementById("showRoomHeading").textContent = response.showRooms.superDulexRoom.heading
+        document.getElementById("showRoomPrice").textContent = response.showRooms.superDulexRoom.price
+        document.getElementById("showRoomDetails").textContent = response.showRooms.superDulexRoom.details
+
       }
     }
   }
