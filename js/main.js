@@ -8,11 +8,35 @@ slides.forEach((slide, index) => {
 
 const goPreviousSlide = () => {
   counter = (counter - 1) % 3;
+  // console.log(counter);
   slideImage();
 };
 const goNextSlide = () => {
   counter = (counter + 1) % 3;
+  // console.log(counter);
   slideImage();
+  async function setData() {
+    const response = await fetch(`http://localhost:5000/`)
+    .then(function (res) {
+      return res.json();
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+    if (response.error) {
+      alert(response.error.message);
+    } else { 
+      if (counter === 0){
+        document.getElementById("showRoomHeading")
+      }
+      else if ( counter === 1){
+      }
+      else if (counter === 2){
+    
+      }
+    }
+  }
+  setData()
 };
 
 const slideImage = () => {
@@ -70,6 +94,11 @@ async function getData() {
         response.wellnessService.subHeading;
       document.getElementById("adventureServiceDetails").textContent =
         response.wellnessService.details;
+      document.getElementById("slide1").src =
+        response.showRooms.standardRoom.url;
+      document.getElementById("slide2").src = response.showRooms.dulexRoom.url;
+      document.getElementById("slide3").src =
+        response.showRooms.superDulexRoom.url;
     } catch (err) {
       console.log(err);
     }
@@ -77,8 +106,10 @@ async function getData() {
 }
 getData();
 
-function handleFormSubmit(e) {
-  e.preventDefault();
-  let checkin = document.getElementById("check-in").value;
-  console.log(checkin);
+function handleFormSubmit() {
+  let checkIn = document.getElementById("check-in").value;
+  let checkOut = document.getElementById("check-out").value;
+  let adults = document.getElementById("adults").value;
+  let childrens = document.getElementById("childrens").value;
+  console.log(checkIn, checkOut, adults, childrens);
 }

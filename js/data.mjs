@@ -32,3 +32,24 @@ export const adventureService = {
   details:
     "Skincare and spa supplements harness powerful natural ingredients to provide balance and optimal welbeing.",
 };
+
+export const showRooms = {
+    standardRoom : {
+        url : "https://i.ibb.co/WNrz0C5/standard-Room.jpg",
+        heading : "STANDARD ROOM",
+        price : "From: $150 / night",
+        details : "With wide and comfortable areas and daylight pouring in from the ... "
+    },
+    dulexRoom : {
+        url : "https://i.ibb.co/fG1M7XP/dulex-Room.jpg",
+        heading : "DULEX ROOM",
+        price : "From: $200 / night",
+        details : "With wide and comfortable areas and daylight pouring in from the ... "
+    },
+    superDulexRoom : {
+        url : "https://i.ibb.co/p12W1wV/super-Dulex-Room.jpg",
+        heading : "SUPER DULEX ROOM",
+        price : "From: $300 / night",
+        details : "With wide and comfortable areas and daylight pouring in from the ... "
+    }
+}

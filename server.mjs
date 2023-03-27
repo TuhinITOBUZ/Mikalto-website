@@ -16,6 +16,7 @@ function getRequestData(req) {
       giftCardService : data.giftCardService,
       spaService : data.spaService,
       adventureService: data.adventureService,
+      showRooms: data.showRooms,
     });
   }
   else{
