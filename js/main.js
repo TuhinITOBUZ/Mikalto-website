@@ -19,3 +19,19 @@ const slideImage = () => {
     slide.style.transform = `translateX(-${counter * 150}%)`;
   });
 };
+
+async function getData() {
+  const response = await fetch(`http://localhost:5000/`)
+    .then(function (res) {
+      return res.json();
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+    if (response.error) {
+      alert(response.error.message);
+    } else {
+      document.getElementById("page-banner").style.backgroundImage = `url(${response})`
+     }
+}
+getData()

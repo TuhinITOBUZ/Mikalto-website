@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-footer {
-  padding: 0 10rem;
-}
-
 .navbar-subheading {
   font-size: 0.5rem;
 }
@@ -44,7 +40,7 @@ footer {
 }
 
 .page-banner {
-  background-image: url("/images/pageBanner/bannerBanner.jpg");
+  /* background-image: url("/images/pageBanner/bannerBanner.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -115,13 +111,13 @@ footer {
 .show-room-pictures {
   width: 100%;
   overflow: hidden;
-  height: 60vh;
+  height: 70vh;
 }
 
 .show-room-pictures img {
   position: absolute;
   width: 100%;
-  height: 60vh;
+  height: 70vh;
 }
 
 .show-room-pictures-previous-button,
@@ -288,6 +284,11 @@ footer hr {
 }
 
 @media screen and (min-width: 960px) {
+
+  footer {
+    padding: 0 10rem;
+  }
+
   .navbar-icons img {
     width: 30%;
   }
