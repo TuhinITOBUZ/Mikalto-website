@@ -12,6 +12,12 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -124,8 +130,8 @@
         >
           <p class="fs-1 text-left deep-blue-color">Search Room</p>
           <p>Get the latest on our COVID-19 response</p>
-          <div class="d-flex flex-row gap-2 justify-content-center">
-            <div class="form-date-inputs d-flex flex-column">
+          <div class="d-flex flex-row gap-2 justify-content-center gap-2">
+            <div class="form-date-inputs d-flex flex-column gap-2">
               <div class="d-flex flex-row">
                 <img
                   src="/images/pageBanner/calenderIcon.svg"
@@ -140,8 +146,8 @@
                 required
               />
             </div>
-            <div class="form-date-inputs d-flex flex-column">
-              <div class="d-flex flex-row">
+            <div class="form-date-inputs d-flex flex-column gap-2">
+              <div class="d-flex flex-row ">
                 <img
                   src="/images/pageBanner/calenderIcon.svg"
                   alt="calenderIcon"
@@ -251,24 +257,9 @@
         </div>
       </div>
       <div class="show-room-pictures position-relative">
-        <img
-          id="slide1"
-          class="slide"
-
-          alt="room"
-        />
-        <img
-          id="slide2"
-          class="slide"
-
-          alt="room"
-        />
-        <img
-          id="slide3"
-          class="slide"
-
-          alt="room"
-        />
+        <img id="slide1" class="slide" alt="room" />
+        <img id="slide2" class="slide" alt="room" />
+        <img id="slide3" class="slide" alt="room" />
         <button
           class="p-2 show-room-pictures-previous-button"
           onclick="goPreviousSlide()"

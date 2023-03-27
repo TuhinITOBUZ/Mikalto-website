@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body{
+  font-family: 'Quicksand', sans-serif !important; 
+}
+
 .navbar-subheading {
   font-size: 0.5rem;
 }
