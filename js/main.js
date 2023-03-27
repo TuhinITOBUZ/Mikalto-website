@@ -152,5 +152,19 @@ function handleFormSubmit() {
   let checkOut = document.getElementById("check-out").value;
   let adults = document.getElementById("adults").value;
   let childrens = document.getElementById("childrens").value;
-  console.log(checkIn, checkOut, adults, childrens);
+  let formDetails = {
+    checkInTime : checkIn,
+    checkOutTime : checkOut,
+    adults : adults,
+    childrens : childrens,
+  }
+  fetch("http://localhost:5000/form-data", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+      body: JSON.stringify(formDetails),
+    }).then((res) => {
+      console.log("Request complete! response:", res);
+    });
 }
