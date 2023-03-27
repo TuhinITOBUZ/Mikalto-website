@@ -101,7 +101,7 @@
 .show-room-details {
   background-color: #05014a;
   color: #ffffff;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .show-room-details button {
@@ -144,7 +144,7 @@
 }
 
 .slide {
-  transition: 1s all ease-in-out;
+  transition: .5s all ease-in-out;
 }
 
 .section-why-choose-our-hostel {
@@ -368,7 +368,7 @@ footer hr {
     height: fit-content;
     position: relative;
     padding: 4rem !important;
-    top: 4rem;
+    top: 1.5rem;
     left: 20%;
   }
 
