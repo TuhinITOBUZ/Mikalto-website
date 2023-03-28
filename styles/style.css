@@ -21,7 +21,7 @@ body {
 }
 
 .grey-color {
-  color: #666362;
+  color: #c0bdbc;
 }
 
 .nav-item a {
@@ -36,6 +36,10 @@ body {
   background-color: white;
   width: 90%;
   height: fit-content;
+}
+
+.page-banner-form > div {
+  flex-direction: column;
 }
 
 .page-banner-form-buttom {
@@ -71,7 +75,11 @@ body {
 }
 
 .form-date-inputs {
-  width: 40%;
+  width: 100%;
+}
+
+.form-date-inputs img {
+  width: 10%;
 }
 
 .homestay-adds-images {
@@ -310,6 +318,10 @@ footer hr {
     width: 30%;
     height: fit-content;
     left: -8%;
+  }
+
+  .page-banner-form > div {
+    flex-direction: row;
   }
 
   .form-date-inputs {

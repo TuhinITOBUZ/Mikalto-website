@@ -34,26 +34,26 @@ async function getData() {
       document.getElementById("giftCardService").src =
         response.giftCardService.url;
       document.getElementById("giftCardServiceHeading").textContent =
-        response.wellnessService.heading;
+        response.giftCardService.heading;
       document.getElementById("giftCardServiceSubHeading").textContent =
-        response.wellnessService.subHeading;
+        response.giftCardService.subHeading;
       document.getElementById("giftCardServiceDetails").textContent =
-        response.wellnessService.details;
+        response.giftCardService.details;
       document.getElementById("spaService").src = response.spaService.url;
       document.getElementById("spaServiceHeading").textContent =
-        response.wellnessService.heading;
+        response.spaService.heading;
       document.getElementById("spaServiceSubHeading").textContent =
-        response.wellnessService.subHeading;
+        response.spaService.subHeading;
       document.getElementById("spaServiceDetails").textContent =
-        response.wellnessService.details;
+        response.spaService.details;
       document.getElementById("adventureService").src =
         response.adventureService.url;
       document.getElementById("adventureServiceHeading").textContent =
-        response.wellnessService.heading;
+        response.adventureService.heading;
       document.getElementById("adventureServiceSubHeading").textContent =
-        response.wellnessService.subHeading;
+        response.adventureService.subHeading;
       document.getElementById("adventureServiceDetails").textContent =
-        response.wellnessService.details;
+        response.adventureService.details;
       document.getElementById("activity1").src =
         response.activities.poolActivity;
       document.getElementById("activity2").src =
