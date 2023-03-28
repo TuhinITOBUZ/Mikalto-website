@@ -1,7 +1,7 @@
 const slides = document.querySelectorAll(".slide");
 const form = document.getElementById("page-banner-form");
 let counter = 0;
-
+console.log("working")
 async function getData() {
   const response = await fetch(`http://localhost:5000/`)
     .then(function (res) {
