@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 
-body{
-  font-family: 'Quicksand', sans-serif !important; 
+body {
+  font-family: "Quicksand", sans-serif !important;
 }
 
 .navbar-subheading {
@@ -44,7 +44,6 @@ body{
 }
 
 .page-banner {
-  /* background-image: url("/images/pageBanner/bannerBanner.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -148,7 +147,7 @@ body{
 }
 
 .slide {
-  transition: .5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
 }
 
 .section-why-choose-our-hostel {
@@ -179,7 +178,6 @@ body{
 }
 
 .services-banner {
-  background-image: url("../images/services/banner.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -288,7 +286,6 @@ footer hr {
 }
 
 @media screen and (min-width: 960px) {
-
   footer {
     padding: 0 10rem;
   }

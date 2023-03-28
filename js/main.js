@@ -17,9 +17,12 @@ async function getData() {
       document.getElementById(
         "page-banner"
       ).style.backgroundImage = `url(${response.pageBanner})`;
-      document.getElementById("homestay1").src = response.homestay1;
-      document.getElementById("homestay2").src = response.homestay2;
-      document.getElementById("homestay3").src = response.homestay3;
+      document.getElementById(
+        "services-banner"
+      ).style.backgroundImage = `url(${response.servicesBanner})`;
+      document.getElementById("homestay1").src = response.homestays.homestay1;
+      document.getElementById("homestay2").src = response.homestays.homestay2;
+      document.getElementById("homestay3").src = response.homestays.homestay3;
       document.getElementById("wellnessService").src =
         response.wellnessService.url;
       document.getElementById("wellnessServiceHeading").textContent =
@@ -51,11 +54,29 @@ async function getData() {
         response.wellnessService.subHeading;
       document.getElementById("adventureServiceDetails").textContent =
         response.wellnessService.details;
+      document.getElementById("activity1").src =
+        response.activities.poolActivity;
+      document.getElementById("activity2").src =
+        response.activities.forestHomestayActivity;
       document.getElementById("slide1").src =
         response.showRooms.standardRoom.url;
       document.getElementById("slide2").src = response.showRooms.dulexRoom.url;
       document.getElementById("slide3").src =
         response.showRooms.superDulexRoom.url;
+      document.getElementById("location-section-logo").src =
+        response.locationSection.flowerLogo;
+      document.getElementById("location-section-plane-logo").src =
+        response.locationSection.planeLogo;
+      document.getElementById("location-section-bus-logo").src =
+        response.locationSection.busLogo;
+      document.getElementById("location-section-van-logo").src =
+        response.locationSection.vanLogo;
+      document.getElementById("location-section-large-travel-picture").src =
+        response.locationSection.largeTravelPicture;
+      document.getElementById("location-section-small-travel-picture-1").src =
+        response.locationSection.smallTravelPicture1;
+      document.getElementById("location-section-small-travel-picture-2").src =
+        response.locationSection.smallTravelPicture2;
     } catch (err) {
       console.log(err);
     }
@@ -155,7 +176,7 @@ function handleFormSubmit(event) {
     adults: document.getElementById("adults").value,
     childrens: document.getElementById("childrens").value,
   };
-  fetch("http://localhost:5000/form-data", {
+  fetch("http://localhost:5000/", {
     method: "POST",
     headers: {
       "Content-type": "application/json; charset=UTF-8",
