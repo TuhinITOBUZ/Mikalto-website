@@ -28,17 +28,13 @@ body {
   font-size: 0.7rem;
 }
 
-.navbar-icons img {
-  width: 10%;
-}
-
 .page-banner-form {
   background-color: white;
   width: 90%;
   height: fit-content;
 }
 
-.page-banner-form > div {
+.page-banner-form>div {
   flex-direction: column;
 }
 
@@ -162,21 +158,21 @@ body {
   flex-direction: column;
 }
 
-.activity-pool-time {
+.activity {
   flex-direction: column;
 }
 
-.activity-pool-time img {
+.activity img {
   height: 100%;
 }
 
-.activity-pool-time-details {
+.activity-details {
   background-color: #05014a;
   padding: 1rem;
   color: #ffffff;
 }
 
-.activity-pool-time-details button {
+.activity-details button {
   border: 1px solid white;
 }
 
@@ -193,7 +189,7 @@ body {
   margin-top: 2rem;
 }
 
-.services-banner > div {
+.services-banner>div {
   background-color: #ffffff;
   width: 70%;
   height: fit-content;
@@ -227,7 +223,7 @@ body {
   height: 20%;
 }
 
-.location-map > p > iframe {
+.location-map>p>iframe {
   width: 100%;
   height: 40vh;
 }
@@ -251,22 +247,22 @@ body {
   background-color: #05014a;
 }
 
-.update-section > div {
+.update-section>div {
   border: 0.5px solid #666362;
   padding: 0.7rem;
   width: 95%;
 }
 
-.update-section > div > input {
+.update-section>div>input {
   border: none;
   width: 80%;
 }
 
-.update-section > div > button {
+.update-section>div>button {
   background-color: #05014a;
 }
 
-footer > div {
+footer>div {
   flex-direction: column;
 }
 
@@ -289,7 +285,7 @@ footer hr {
   display: flex;
 }
 
-.select-language-footer > div {
+.select-language-footer>div {
   display: none !important;
 }
 
@@ -320,7 +316,7 @@ footer hr {
     left: -8%;
   }
 
-  .page-banner-form > div {
+  .page-banner-form>div {
     flex-direction: row;
   }
 
@@ -363,20 +359,24 @@ footer hr {
     flex-direction: row;
   }
 
-  .activity-pool-time {
+  .activity {
     flex-direction: row;
   }
 
-  .activity-pool-time-details {
-    width: 60vw;
+  .activity-details {
+    width: 50%;
     padding: 5%;
+  }
+
+  .activity-image {
+    width: 50%;
   }
 
   .services {
     width: 22%;
   }
 
-  .services-banner > div {
+  .services-banner>div {
     width: 30%;
     height: fit-content;
     position: relative;
@@ -398,7 +398,7 @@ footer hr {
     width: 50%;
   }
 
-  .location-map > p > iframe {
+  .location-map>p>iframe {
     padding: 10% 10% 10% 0;
     width: 100%;
     height: 90vh;
@@ -425,11 +425,11 @@ footer hr {
     width: 220% !important;
   }
 
-  .update-section > div {
+  .update-section>div {
     width: 45%;
   }
 
-  footer > div {
+  footer>div {
     flex-direction: row;
   }
 
@@ -437,7 +437,7 @@ footer hr {
     width: 10%;
   }
 
-  footer > div > div {
+  footer>div>div {
     width: 15%;
   }
 
@@ -445,7 +445,7 @@ footer hr {
     display: flex;
   }
 
-  .select-language-footer > div {
+  .select-language-footer>div {
     display: flex !important;
     right: 0;
   }

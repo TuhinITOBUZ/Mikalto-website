@@ -1,711 +1,540 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mikalto</title>
-    <link rel="stylesheet" href="styles/style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand:wght@300&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-          <div class="p-2 d-flex flex-column align-items-center">
-            <a class="text-decoration-none display-4 deep-blue-color" href="#"
-              >Mikalto</a
-            >
-            <a
-              class="text-decoration-none navbar-subheading deep-blue-color"
-              href="#"
-              >HOTELS & RESORTS</a
-            >
-          </div>
 
-          <button
-            type="button"
-            class="navbar-toggler"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-          >
-            <span class="navbar-toggler-icon"></span>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mikalto</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand:wght@300&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <div class="p-2 d-flex flex-column align-items-center">
+          <a class="text-decoration-none display-4 deep-blue-color" href="#">Mikalto</a>
+          <a class="text-decoration-none navbar-subheading deep-blue-color" href="#">HOTELS & RESORTS</a>
+        </div>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav text-center w-100 d-flex align-items-center justify-content-center">
+            <a class="nav-link text-dark text-decoration-none deep-blue-color" aria-current="page" href="#">Home</a>
+            <a class="nav-link text-dark text-decoration-none deep-blue-color" href="#">Our Rooms</a>
+            <a class="nav-link text-dark text-decoration-none deep-blue-color" href="#">Page</a>
+            <a class="nav-link text-dark text-decoration-none deep-blue-color" href="#">Features</a>
+            <a class="nav-link text-dark text-decoration-none deep-blue-color" href="#">Blog</a>
+            <a class="nav-link text-dark text-decoration-none deep-blue-color" href="#">Contact</a>
+          </div>
+          <div class="navbar-nav ms-auto">
+            <div class="d-flex justify-content-center gap-4 navbar-icons p-3">
+              <select class="border-0" name="" id="language">
+                <option value="EN">EN</option>
+              </select>
+              <i class="fas fa-solid fa-bag-shopping"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="px-4 py-2">
+    <div id="page-banner" class="page-banner d-flex justify-content-around align-items-center">
+      <div class="d-flex flex-column p-4 page-banner-heading">
+        <h4 class="position-relative text-left display-4 text-light">
+          Enjoy your dream vaccation
+        </h4>
+        <p class="text-light">Quite and endlessly beautiful hideaway</p>
+        <div class="d-flex gap-4 flex-row  justify-content-start align-content-start">
+          <button class="page-banner-heading-button">
+            <a class="text-decoration-none text-dark" href="#">About Us</a>
           </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div
-              class="navbar-nav text-center w-100 d-flex align-items-center justify-content-center"
-            >
-              <a
-                class="nav-link text-dark text-decoration-none deep-blue-color"
-                aria-current="page"
-                href="#"
-                >Home</a
-              >
-              <a
-                class="nav-link text-dark text-decoration-none deep-blue-color"
-                href="#"
-                >Our Rooms</a
-              >
-              <a
-                class="nav-link text-dark text-decoration-none deep-blue-color"
-                href="#"
-                >Page</a
-              >
-              <a
-                class="nav-link text-dark text-decoration-none deep-blue-color"
-                href="#"
-                >Features</a
-              >
-              <a
-                class="nav-link text-dark text-decoration-none deep-blue-color"
-                href="#"
-                >Blog</a
-              >
-              <a
-                class="nav-link text-dark text-decoration-none deep-blue-color"
-                href="#"
-                >Contact</a
-              >
+          <a class="text-decoration-none text-light h-100" href="#">View Homestays →</a>
+        </div>
+      </div>
+      <form onsubmit="handleFormSubmit(event)" id="page-banner-form"
+        class="page-banner-form position-relative p-4 d-flex flex-column gap-4 align-items-center justify-content-center">
+        <p class="fs-1 text-left deep-blue-color">Search Room</p>
+        <p>Get the latest on our COVID-19 response</p>
+        <div class="d-flex gap-2 justify-content-center gap-2 w-100">
+          <div class="form-date-inputs d-flex flex-column gap-2">
+            <div class="d-flex flex-row">
+              <i class="fa-solid fa-calendar-days p-1"></i>
+              <label for="" class="deep-blue-color">Checkin*</label>
             </div>
-            <div class="navbar-nav ms-auto">
-              <div class="d-flex justify-content-center gap-2 navbar-icons">
-                <select class="border-0" name="" id="">
-                  <option value="EN">EN</option>
-                </select>
-                <a href="#"
-                  ><img
-                    class="w-50"
-                    src="/images/navbar/navbarShopbag.png"
-                    alt="logo"
-                /></a>
-              </div>
+            <input id="check-in" type="date" placeholder="Check-in-date" type="date" class="border-0 border-bottom"
+              required />
+          </div>
+          <div class="form-date-inputs d-flex flex-column gap-2">
+            <div class="d-flex flex-row">
+              <i class="fa-solid fa-calendar-days p-1"></i>
+              <label for="" class="deep-blue-color">Checkout*</label>
             </div>
+            <input id="check-out" type="date" placeholder="Check-in-date" class="border-0 border-bottom" required />
           </div>
         </div>
-      </nav>
-    </header>
-
-    <section class="px-4 py-2">
-      <div
-        id="page-banner"
-        class="page-banner d-flex justify-content-around align-items-center"
-      >
-        <div class="d-flex flex-column p-4 page-banner-heading">
-          <h4 class="position-relative text-left display-4 text-light">
-            Enjoy your dream vaccation
-          </h4>
-          <p class="text-light">Quite and endlessly beautiful hideaway</p>
-          <div
-            class="d-flex gap-4 flex-row align-items-center justify-content-center"
-          >
-            <button class="page-banner-heading-button">
-              <a class="text-decoration-none text-dark" href="#">About Us</a>
-            </button>
-            <div class="d-flex flex-row gap-2">
-              <a class="text-decoration-none text-light" href="#"
-                >View Homestays</a
-              >
-              <img
-                class="page-banner-right-arrow"
-                src="/images/pageBanner/rightArrow.svg"
-                alt="right-arrow-logo"
-              />
-            </div>
-          </div>
-        </div>
-        <form
-          onsubmit="handleFormSubmit(event)"
-          id="page-banner-form"
-          class="page-banner-form position-relative p-4 d-flex flex-column gap-4 align-items-center justify-content-center"
-        >
-          <p class="fs-1 text-left deep-blue-color">Search Room</p>
-          <p>Get the latest on our COVID-19 response</p>
-          <div class="d-flex gap-2 justify-content-center gap-2">
-            <div class="form-date-inputs d-flex flex-column gap-2">
-              <div class="d-flex flex-row">
-                <img
-                  src="/images/pageBanner/calenderIcon.svg"
-                  alt="calenderIcon"
-                />
-                <label for="" class="deep-blue-color">Checkin*</label>
-              </div>
-              <input
-                id="check-in"
-                type="date"
-                class="border-0 border-bottom"
-                required
-              />
-            </div>
-            <div class="form-date-inputs d-flex flex-column gap-2">
-              <div class="d-flex flex-row">
-                <img
-                  src="/images/pageBanner/calenderIcon.svg"
-                  alt="calenderIcon"
-                />
-                <label for="" class="deep-blue-color">Checkout*</label>
-              </div>
-              <input
-                id="check-out"
-                type="date"
-                class="border-0 border-bottom"
-                required
-              />
-            </div>
-          </div>
-          <div class="w-100 d-flex flex-column">
-            <label for="" class="deep-blue-color">Adults</label>
-            <select name="" id="adults" class="border-0 border-bottom">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </div>
-          <div class="w-100 d-flex flex-column">
-            <label for="" class="deep-blue-color">Childeren</label>
-            <select name="" id="childrens" class="border-0 border-bottom">
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-          </div>
-          <button
-            type="submit"
-            class="page-banner-form-buttom w-100 rounded p-1"
-          >
-            Check availability
-          </button>
-        </form>
-      </div>
-    </section>
-
-    <section
-      class="p-3 d-flex flex-wrap justify-content-around align-items-center position-relative homestay-adds"
-    >
-      <div class="d-flex gap-4 flex-column w-50 homestay-adds-details">
-        <p class="deep-blue-color">WELCOME TO</p>
-        <p class="display-3">The Mikalto Luxury & Comfort Homestay</p>
-        <p>
-          welcome to our five-star hotel in Puerto de la Cruz's old town. A
-          marvellous combination of architecture, design and contemporary art.
-          32 room and 10 uniquely different suites ensure our guests' stay is
-          extra special.
-        </p>
-        <img class="w-50" src="/images/homestays/sign.jpg" alt="signature" />
-      </div>
-      <div class="position-relative w-50 homestay-adds-images">
-        <img
-          class="homestay1 position-absolute"
-          id="homestay1"
-          alt="homestay"
-        />
-        <img
-          class="homestay2 position-absolute"
-          id="homestay2"
-          alt="homestay"
-        />
-        <img
-          class="homestay3 position-absolute"
-          id="homestay3"
-          alt="homestay"
-        />
-      </div>
-    </section>
-
-    <section class="p-4 show-rooms d-flex position-relative gap-1">
-      <div class="d-flex justify-content-center show-room-details">
-        <div class="w-75 d-flex flex-column justify-content-start">
-          <p>ELEGANCE AND COMFORT</p>
-          <p id="showRoomHeading" class="display-4">STANDART ROOM</p>
-          <p id="showRoomPrice">From: $150 / night</p>
-          <p id="showRoomDetails">
-            With wide and comfortable areas and daylight pouring in from the ...
-          </p>
-          <div class="container">
-            <div class="row">
-              <div class="col">Bed:</div>
-              <div id="bed-size" class="col">Queen Size Bed</div>
-              <div class="w-100"></div>
-              <div class="col">Capacity:</div>
-              <div id="capacity" class="col">2 adults, 1 childeren</div>
-              <div class="w-100"></div>
-              <div class="col">Room size:</div>
-              <div id="room-size" class="col">55 sqm</div>
-              <div class="w-100"></div>
-              <div class="col">View:</div>
-              <div id="hotel-view" class="col">garden view</div>
-            </div>
-          </div>
-          <div class="d-flex justify-content-center align-item-center">
-            <button class="btn p-2 m-4 w-50">
-              <a class="text-decoration-none text-light" href="#"
-                >View Detaiks</a
-              >
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="show-room-pictures position-relative">
-        <img id="slide1" class="slide" alt="room" />
-        <img id="slide2" class="slide" alt="room" />
-        <img id="slide3" class="slide" alt="room" />
-        <button
-          class="p-2 show-room-pictures-previous-button"
-          onclick="goPreviousSlide()"
-        >
-          Previous
-        </button>
-        <button
-          class="p-2 show-room-pictures-next-button"
-          onclick="goNextSlide()"
-        >
-          Next
-        </button>
-      </div>
-    </section>
-
-    <section class="d-flex flex-column gap-2">
-      <div class="d-flex flex-column">
-        <p class="text-center display-4">Why choose our Hostel</p>
-        <div
-          class="d-flex section-why-choose-our-hostel gap-4 justify-content-center align-item-center"
-        >
-          <div class="p-4">
-            <img
-              class="w-25"
-              src="/images/ourHotel/uniqueCuisine.jpg"
-              alt="logo"
-            />
-            <div class="d-flex flex-column">
-              <p class="fs-3">Unique cuisine</p>
-              <p>
-                We use the best ingredients to make special and really tasty
-                dihes. Choose what you want to eat every day. You order at the
-                moment.
-              </p>
-            </div>
-          </div>
-          <div class="p-4">
-            <img class="w-25" src="/images/ourHotel/yoga.jpg" alt="logo" />
-            <div class="d-flex flex-column">
-              <p class="fs-3">Yoga & Gym</p>
-              <p>
-                Sauna and solarium, a fitness corner, bicycle and Mikalto
-                Walking poles available. To stay in shape especially on
-                vaccation.
-              </p>
-            </div>
-          </div>
-          <div class="p-4">
-            <img class="w-25" src="/images/ourHotel/location.jpg" alt="logo" />
-            <div class="d-flex flex-column">
-              <p class="fs-3">Perfect Location</p>
-              <p>
-                The hotel is location near sone of the most beautiful sandy
-                beaches. This is the hotel to book if you plan to spend a great
-                deal of time.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="activities d-flex flex-column">
-      <div class="d-flex activity-pool-time">
-        <div class="activity-pool-time-details">
-          <p>OTHER ACTIVITIES</p>
-          <p class="display-4">Give yourself a smile- Smile & Wellness</p>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
-          <a class="text-decoration-none text-light" href="#">Explore More </a>
-        </div>
-        <div>
-          <img class="w-100" id="activity1" alt="pool" />
-        </div>
-      </div>
-      <div class="d-flex activity-pool-time">
-        <div>
-          <img class="w-100" id="activity2" alt="forest-homestay" />
-        </div>
-        <div class="activity-pool-time-details">
-          <p>RECONNECT WITH NATURE</p>
-          <p class="display-4">Experience a truly unforgettable holidy</p>
-          <p>
-            The wildness and authenticity of this tiny village nested between
-            steep mountain cliffs and miles and miles of beautiful beaches drew
-            foreign visitors like a manet.
-          </p>
-          <ul>
-            <li>Thermal water with ancient bath</li>
-            <li>Turkish bath</li>
-            <li>Turkish sauna</li>
-            <li>Relax and therapy message</li>
-          </ul>
-          <button class="btn">
-            <a class="text-decoration-none text-light" href="#"
-              >Book your stay</a
-            >
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="py-5 services-section d-flex flex-column justify-content-center align-item-center"
-    >
-      <p class="text-center">EXPERIENCE MATTERS</p>
-      <p class="display-6 text-center">
-        Escape from the world see the experience before you
-      </p>
-      <p class="display-6 text-center">
-        feel it. Discover the luxury of Hotel Mikalto
-      </p>
-      <div class="w-100 d-flex flex-wrap gap-4 justify-content-center">
-        <div class="services d-flex flex-column gap-1 p-4">
-          <img class="w-100" id="wellnessService" alt="wellness" />
-          <p id="wellnessServiceHeading" class="deep-blue-color"></p>
-          <p id="wellnessServiceSubHeading" class="fs-4"></p>
-          <p id="wellnessServiceDetails"></p>
-          <a class="text-decoration-none deep-blue-color" href="#"
-            >Discover more →</a
-          >
-        </div>
-        <div class="services d-flex flex-column gap-1 p-4">
-          <img class="w-100" id="giftCardService" alt="gift-card" />
-          <p id="giftCardServiceHeading" class="deep-blue-color"></p>
-          <p id="giftCardServiceSubHeading" class="fs-4"></p>
-          <p id="giftCardServiceDetails"></p>
-          <a class="text-decoration-none deep-blue-color" href="#"
-            >Discover more →</a
-          >
-        </div>
-        <div class="services d-flex flex-column gap-1 p-4">
-          <img class="w-100" id="spaService" alt="spa" />
-          <p id="spaServiceHeading" class="deep-blue-color"></p>
-          <p id="spaServiceSubHeading" class="fs-4"></p>
-          <p id="spaServiceDetails"></p>
-          <a class="text-decoration-none deep-blue-color" href="#"
-            >Discover more →</a
-          >
-        </div>
-        <div class="services d-flex flex-column gap-1 p-4">
-          <img class="w-100" id="adventureService" alt="adventure" />
-          <p id="adventureServiceHeading" class="deep-blue-color"></p>
-          <p id="adventureServiceSubHeading" class="fs-4"></p>
-          <p id="adventureServiceDetails"></p>
-          <a class="text-decoration-none deep-blue-color" href="#"
-            >Discover more →</a
-          >
-        </div>
-      </div>
-      <div class="d-flex align-item-center justify-content-center">
-        <button class="rounded p-2 border-0 text-center">
-          <a
-            class="text-decoration-none deep-blue-color p-2 text-center"
-            href="#"
-            >View all services</a
-          >
-        </button>
-      </div>
-      <div
-        id="services-banner"
-        class="services-banner position-relative d-flex justify-content-center align-item-center"
-      >
-        <div class="d-flex flex-column p-3">
-          <p class="fs-1">Say hello</p>
-          <p class="fs-1">to a whole new you</p>
-          <p>
-            Proin me leo metus faucibus vehicla. Donec vulputate in magna eget
-            egestas. Aliquam ac facilisis ante, sit amet tincidunt ante. Fusce
-            dolor sapien.
-          </p>
-          <a class="text-decoration-none deep-blue-color" href="#"
-            >Discover more →</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <section class="reviews">
-      <div class="container mt-5 mb-3">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card p-3 mb-2">
-              <div class="d-flex flex-column">
-                <img src="/images/reviews/selenaMayer.jpg" alt="review" />
-                <p>Wonderful new year trip</p>
-                <p>
-                  One of the best hotels i've ever stayed in. The stuff are very
-                  friendly and helpful, they were so helpful it made me feel
-                  bad. it includes use of the spa, wounderful, it has a...
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card p-3 mb-2">
-              <div class="d-flex flex-column">
-                <img src="/images/reviews/estherHoward.jpg" alt="review" />
-                <p>Recommended</p>
-                <p>
-                  One of the best hotels i've ever stayed in. The stuff are very
-                  friendly and helpful, they were so helpful it made me feel
-                  bad. it includes use of the spa, wounderful, it has a...
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card p-3 mb-2">
-              <div class="d-flex flex-column">
-                <img src="/images/reviews/janeScopper.jpg" alt="review" />
-                <p>All good</p>
-                <p>
-                  One of the best hotels i've ever stayed in. The stuff are very
-                  friendly and helpful, they were so helpful it made me feel
-                  bad. it includes use of the spa, wounderful, it has a...
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="location-section d-flex py-4">
-      <div class="d-flex flex-column location-travel-options">
-        <img id="location-section-logo" alt="logo" />
-        <p class="deep-blue-color">GETTING HERE</p>
-        <p class="display-5">How to get there?</p>
-        <p>
-          Cras vel sapien erat. Proin molesuada sem, nec euismod metus lutus in.
-          Aliquam eget nibh quis leo tempo congue. Integer accumsan sollicitudin
-          vehicula.
-        </p>
-        <div class="d-flex flex-row location-travel-option gap-2">
-          <img id="location-section-plane-logo" alt="logo" />
-          <p>
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using 'Content here, content
-            here', making it look like readable English.
-          </p>
-        </div>
-        <div class="d-flex flex-row location-travel-option gap-2">
-          <img id="location-section-bus-logo" alt="logo" />
-          <p>
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using 'Content here, content
-            here', making it look like readable English.
-          </p>
-        </div>
-        <div class="d-flex flex-row location-travel-option gap-2">
-          <img id="location-section-van-logo" alt="logo" />
-          <p>
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using 'Content here, content
-            here', making it look like readable English.
-          </p>
-        </div>
-        <a class="text-decoration-none deep-blue-color" href="#"
-          >Discover more →</a
-        >
-      </div>
-      <div class="location-map p-2">
-        <p>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.043769497661!2d88.42922191540151!3d22.57746623848085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275a5466e0099%3A0x563fb49fb6394261!2sItobuz%20Technologies%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1679845522468!5m2!1sen!2sin"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </p>
-      </div>
-    </section>
-
-    <section class="travel-section d-flex position-relative gap-2">
-      <div
-        class="d-flex flex-row travel-section-images position-relative gap-2"
-      >
-        <img
-          id="location-section-large-travel-picture"
-          class="large-travel-picture"
-          alt="travel-picture"
-        />
-        <div class="d-flex flex-column gap-2">
-          <img
-            id="location-section-small-travel-picture-1"
-            class="small-travel-picture"
-            alt="travel-picture"
-          />
-          <img
-            id="location-section-small-travel-picture-2"
-            class="small-travel-picture"
-            alt="travel-picture"
-          />
-        </div>
-      </div>
-      <div class="travel-section-details d-flex flex-column">
-        <div class="w-50">
-          <p class="text-center">SPA & WELLNESS</p>
-          <p class="fs-4 text-center">Side by Side with Nature</p>
-          <p class="text-center">
-            Find harmony and balance from the inside out and outside in. Laborum
-            accusantium libero commodi officiis itaque esse adipisci,
-            necessitatibus asperiores, illo odio.
-          </p>
-          <div class="d-flex justify-content-center">
-            <button class="rounded p-2">
-              <a class="text-decoration-none text-light" href="#">Join Us</a>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="py-4 update-section d-flex flex-column justify-content-center align-items-center"
-    >
-      <p class="deep-blue-color">STORIES DELOVERED STRAIGHT</p>
-      <p class="fs-3">Get News & Update to Your Inbox</p>
-      <div class="d-flex flex-row">
-        <input
-          class="p-2"
-          type="email"
-          placeholder="Enter your email addreess ... "
-        />
-        <button class="p-2 rounded">
-          <a class="text-decoration-none text-light p-4" href="#">Subscribe</a>
-        </button>
-      </div>
-      <p class="grey-color">
-        will be used in accordance with our
-        <a class="text-decoration-none grey-color" href="#"
-          ><u>Privacy Policy</u></a
-        >
-      </p>
-    </section>
-
-    <img
-      class="w-100 p-0 m-0"
-      src="/images/footer/footerDesign.png"
-      alt="design"
-    />
-
-    <footer class="deep-blue-background-color d-flex flex-column">
-      <div class="d-flex justify-content-around text-center">
-        <div class="d-flex flex-column p-2">
-          <div class="p-2 d-flex flex-column align-items-center">
-            <a class="text-decoration-none fs-6 text-light" href="#">Mikalto</a>
-            <a
-              class="text-decoration-none navbar-subheading text-light"
-              href="#"
-              >HOTELS & RESORTS</a
-            >
-          </div>
-          <p class="text-light">
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old.
-          </p>
-          <div class="d-flex flex-row justify-content-around">
-            <p class="text-light fs-6">Follow us:</p>
-            <img src="/images/footer/facebookLogo.svg" alt="facebook" />
-            <img src="/images/footer/twitterLogo.svg" alt="twitter" />
-            <img src="/images/footer/instagramLogo.svg" alt="instagram" />
-            <img src="/images/footer/youtubeLogo.svg" alt="youtube" />
-          </div>
-        </div>
-        <div class="d-flex flex-column p-2">
-          <p class="fs-6 text-light">About</p>
-          <p class="p-1 m-0">
-            <a class="text-decoration-none grey-color" href="#"
-              ><u>About Us</u></a
-            >
-          </p>
-          <p class="grey-color p-1 m-0">Careers</p>
-          <p class="grey-color p-1 m-0">Contact us</p>
-          <p class="grey-color p-1 m-0">Blog</p>
-          <p class="grey-color p-1 m-0">Gift Cards</p>
-        </div>
-        <div class="d-flex flex-column p-2">
-          <p class="fs-6 text-light">Services</p>
-          <p class="grey-color p-1 m-0">spa</p>
-          <p class="grey-color p-1 m-0">Experience</p>
-          <p class="grey-color p-1 m-0">Dining</p>
-          <p class="grey-color p-1 m-0">Event</p>
-        </div>
-        <div class="d-flex flex-column p-2">
-          <p class="fs-6 text-light">Quick Links</p>
-          <p class="grey-color p-1 m-0">Facilities</p>
-          <p class="grey-color p-1 m-0">Accomodation</p>
-          <p class="grey-color p-1 m-0">Reservation</p>
-          <p class="grey-color p-1 m-0">Why choose us</p>
-          <p class="grey-color p-1 m-0">Our Restaurant</p>
-        </div>
-        <div class="d-flex flex-column p-2">
-          <p class="fs-6 text-light">Contact Us</p>
-          <p class="grey-color pt-4 m-0">TotalFree Customer Support</p>
-          <p class="text-light p-0 m-0">(+123)1500-456-7890</p>
-          <p class="grey-color pt-4 m-0">Need Live Support</p>
-          <p class="text-light p-0 m-0">reservation@mikalto.com</p>
-        </div>
-      </div>
-      <div class="d-flex flex-row justify-content-center align-items-center">
-        <hr class="w-75" />
-      </div>
-      <div
-        class="flex-row grey-color gap-4 px-5 position-relative select-language-footer"
-      >
-        <p>Copyright © 2022 Mikalto JWS</p>
-        <p>Privacy</p>
-        <p>Terms</p>
-        <p>Sitemap</p>
-        <div class="flex-row gap-2 p-2 position-absolute">
-          <img src="/images/footer/globe.svg" alt="globe" />
-          <select name="" id="">
-            <option value="EN">EN</option>
+        <div class="w-100 d-flex flex-column">
+          <label for="" class="deep-blue-color">Adults</label>
+          <select name="" id="adults" class="border-0 border-bottom">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
           </select>
         </div>
+        <div class="w-100 d-flex flex-column">
+          <label for="" class="deep-blue-color">Childeren</label>
+          <select name="" id="childrens" class="border-0 border-bottom">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <button type="submit" class="page-banner-form-buttom w-100 rounded p-1">
+          Check availability
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <section class="p-3 d-flex flex-wrap justify-content-around align-items-center position-relative homestay-adds">
+    <div class="d-flex gap-4 flex-column w-50 homestay-adds-details">
+      <p class="deep-blue-color">WELCOME TO</p>
+      <p class="display-3">The Mikalto Luxury & Comfort Homestay</p>
+      <p>
+        welcome to our five-star hotel in Puerto de la Cruz's old town. A
+        marvellous combination of architecture, design and contemporary art.
+        32 room and 10 uniquely different suites ensure our guests' stay is
+        extra special.
+      </p>
+      <img class="w-50" src="/images/homestays/sign.jpg" alt="signature" />
+    </div>
+    <div class="position-relative w-50 homestay-adds-images">
+      <img class="homestay1 position-absolute" id="homestay1" alt="homestay" />
+      <img class="homestay2 position-absolute" id="homestay2" alt="homestay" />
+      <img class="homestay3 position-absolute" id="homestay3" alt="homestay" />
+    </div>
+  </section>
+
+  <section class="p-4 show-rooms d-flex position-relative gap-1">
+    <div class="d-flex justify-content-center show-room-details">
+      <div class="w-75 d-flex flex-column justify-content-start">
+        <p>ELEGANCE AND COMFORT</p>
+        <p id="showRoomHeading" class="display-4">STANDART ROOM</p>
+        <p id="showRoomPrice">From: $150 / night</p>
+        <p id="showRoomDetails">
+          With wide and comfortable areas and daylight pouring in from the ...
+        </p>
+        <div class="container">
+          <div class="row">
+            <div class="col">Bed:</div>
+            <div id="bed-size" class="col">Queen Size Bed</div>
+            <div class="w-100"></div>
+            <div class="col">Capacity:</div>
+            <div id="capacity" class="col">2 adults, 1 childeren</div>
+            <div class="w-100"></div>
+            <div class="col">Room size:</div>
+            <div id="room-size" class="col">55 sqm</div>
+            <div class="w-100"></div>
+            <div class="col">View:</div>
+            <div id="hotel-view" class="col">garden view</div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center align-item-center">
+          <button class="btn p-2 m-4 w-50">
+            <a class="text-decoration-none text-light" href="#">View Detaiks</a>
+          </button>
+        </div>
       </div>
-    </footer>
+    </div>
+    <div class="show-room-pictures position-relative">
+      <img id="slide1" class="slide" alt="room" />
+      <img id="slide2" class="slide" alt="room" />
+      <img id="slide3" class="slide" alt="room" />
+      <button class="p-2 show-room-pictures-previous-button" onclick="goPreviousSlide()">
+        Previous
+      </button>
+      <button class="p-2 show-room-pictures-next-button" onclick="goNextSlide()">
+        Next
+      </button>
+    </div>
+  </section>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
+  <section class="d-flex flex-column gap-2">
+    <div class="d-flex flex-column">
+      <p class="text-center display-4">Why choose our Hostel</p>
+      <div class="d-flex section-why-choose-our-hostel gap-4 justify-content-center align-item-center">
+        <div class="p-4 m-4">
+          <img class="w-25" src="/images/ourHotel/uniqueCuisine.jpg" alt="logo" />
+          <div class="d-flex flex-column">
+            <p class="fs-3">Unique cuisine</p>
+            <p>
+              We use the best ingredients to make special and really tasty
+              dihes. Choose what you want to eat every day. You order at the
+              moment.
+            </p>
+          </div>
+        </div>
+        <div class="p-4 m-4">
+          <img class="w-25" src="/images/ourHotel/yoga.jpg" alt="logo" />
+          <div class="d-flex flex-column">
+            <p class="fs-3">Yoga & Gym</p>
+            <p>
+              Sauna and solarium, a fitness corner, bicycle and Mikalto
+              Walking poles available. To stay in shape especially on
+              vaccation.
+            </p>
+          </div>
+        </div>
+        <div class="p-4 m-4">
+          <img class="w-25" src="/images/ourHotel/location.jpg" alt="logo" />
+          <div class="d-flex flex-column">
+            <p class="fs-3">Perfect Location</p>
+            <p>
+              The hotel is location near sone of the most beautiful sandy
+              beaches. This is the hotel to book if you plan to spend a great
+              deal of time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="/js/main.js"></script>
-  </body>
+  <section class="activities-section d-flex flex-column justify-content-center align-items-center">
+    <div class="d-flex activity">
+      <div class="activity-details">
+        <p>OTHER ACTIVITIES</p>
+        <p class="display-4">Give yourself a smile- Smile & Wellness</p>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text
+          ever since the 1500s, when an unknown printer took a galley of type
+          and scrambled it to make a type specimen book. It has survived not
+          only five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s
+          with the release of Letraset sheets containing Lorem Ipsum passages,
+          and more recently with desktop publishing software like Aldus
+          PageMaker including versions of Lorem Ipsum.
+        </p>
+        <a class="text-decoration-none text-light" href="#">Explore More </a>
+      </div>
+      <div class="activity-image">
+        <img class="w-100" id="activity1" alt="pool" />
+      </div>
+    </div>
+    <div class="d-flex activity">
+      <div class="activity-image">
+        <img class="w-100" id="activity2" alt="forest-homestay" />
+      </div>
+      <div class="activity-details">
+        <p>RECONNECT WITH NATURE</p>
+        <p class="display-4">Experience a truly unforgettable holidy</p>
+        <p>
+          The wildness and authenticity of this tiny village nested between
+          steep mountain cliffs and miles and miles of beautiful beaches drew
+          foreign visitors like a manet.
+        </p>
+        <ul>
+          <li>Thermal water with ancient bath</li>
+          <li>Turkish bath</li>
+          <li>Turkish sauna</li>
+          <li>Relax and therapy message</li>
+        </ul>
+        <button class="btn">
+          <a class="text-decoration-none text-light" href="#">Book your stay</a>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 services-section d-flex flex-column justify-content-center align-item-center">
+    <p class="text-center">EXPERIENCE MATTERS</p>
+    <p class="display-6 text-center">
+      Escape from the world see the experience before you
+    </p>
+    <p class="display-6 text-center">
+      feel it. Discover the luxury of Hotel Mikalto
+    </p>
+    <div class="w-100 d-flex flex-wrap gap-4 justify-content-center">
+      <div class="services d-flex flex-column gap-1 p-4">
+        <img class="w-100" id="wellnessService" alt="wellness" />
+        <p id="wellnessServiceHeading" class="deep-blue-color"></p>
+        <p id="wellnessServiceSubHeading" class="fs-4"></p>
+        <p id="wellnessServiceDetails"></p>
+        <a class="text-decoration-none deep-blue-color" href="#">Discover more →</a>
+      </div>
+      <div class="services d-flex flex-column gap-1 p-4">
+        <img class="w-100" id="giftCardService" alt="gift-card" />
+        <p id="giftCardServiceHeading" class="deep-blue-color"></p>
+        <p id="giftCardServiceSubHeading" class="fs-4"></p>
+        <p id="giftCardServiceDetails"></p>
+        <a class="text-decoration-none deep-blue-color" href="#">Discover more →</a>
+      </div>
+      <div class="services d-flex flex-column gap-1 p-4">
+        <img class="w-100" id="spaService" alt="spa" />
+        <p id="spaServiceHeading" class="deep-blue-color"></p>
+        <p id="spaServiceSubHeading" class="fs-4"></p>
+        <p id="spaServiceDetails"></p>
+        <a class="text-decoration-none deep-blue-color" href="#">Discover more →</a>
+      </div>
+      <div class="services d-flex flex-column gap-1 p-4">
+        <img class="w-100" id="adventureService" alt="adventure" />
+        <p id="adventureServiceHeading" class="deep-blue-color"></p>
+        <p id="adventureServiceSubHeading" class="fs-4"></p>
+        <p id="adventureServiceDetails"></p>
+        <a class="text-decoration-none deep-blue-color" href="#">Discover more →</a>
+      </div>
+    </div>
+    <div class="d-flex align-item-center justify-content-center">
+      <button class="rounded p-2 border-0 text-center">
+        <a class="text-decoration-none deep-blue-color p-2 text-center" href="#">View all services</a>
+      </button>
+    </div>
+    <div id="services-banner" class="services-banner position-relative d-flex justify-content-center align-item-center">
+      <div class="d-flex flex-column p-3">
+        <p class="fs-1">Say hello</p>
+        <p class="fs-1">to a whole new you</p>
+        <p>
+          Proin me leo metus faucibus vehicla. Donec vulputate in magna eget
+          egestas. Aliquam ac facilisis ante, sit amet tincidunt ante. Fusce
+          dolor sapien.
+        </p>
+        <a class="text-decoration-none deep-blue-color" href="#">Discover more →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="container mt-5 mb-3">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card p-3 mb-2">
+            <div class="d-flex flex-column">
+              <img src="/images/reviews/selenaMayer.jpg" alt="review" />
+              <p>Wonderful new year trip</p>
+              <p>
+                One of the best hotels i've ever stayed in. The stuff are very
+                friendly and helpful, they were so helpful it made me feel
+                bad. it includes use of the spa, wounderful, it has a...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3 mb-2">
+            <div class="d-flex flex-column">
+              <img src="/images/reviews/estherHoward.jpg" alt="review" />
+              <p>Recommended</p>
+              <p>
+                One of the best hotels i've ever stayed in. The stuff are very
+                friendly and helpful, they were so helpful it made me feel
+                bad. it includes use of the spa, wounderful, it has a...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3 mb-2">
+            <div class="d-flex flex-column">
+              <img src="/images/reviews/janeScopper.jpg" alt="review" />
+              <p>All good</p>
+              <p>
+                One of the best hotels i've ever stayed in. The stuff are very
+                friendly and helpful, they were so helpful it made me feel
+                bad. it includes use of the spa, wounderful, it has a...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="location-section d-flex py-4">
+    <div class="d-flex flex-column location-travel-options">
+      <img id="location-section-logo" alt="logo" />
+      <p class="deep-blue-color">GETTING HERE</p>
+      <p class="display-5">How to get there?</p>
+      <p>
+        Cras vel sapien erat. Proin molesuada sem, nec euismod metus lutus in.
+        Aliquam eget nibh quis leo tempo congue. Integer accumsan sollicitudin
+        vehicula.
+      </p>
+      <div class="d-flex flex-row location-travel-option gap-2">
+        <img id="location-section-plane-logo" alt="logo" />
+        <p>
+          It is a long established fact that a reader will be distracted by
+          the readable content of a page when looking at its layout. The point
+          of using Lorem Ipsum is that it has a more-or-less normal
+          distribution of letters, as opposed to using 'Content here, content
+          here', making it look like readable English.
+        </p>
+      </div>
+      <div class="d-flex flex-row location-travel-option gap-2">
+        <img id="location-section-bus-logo" alt="logo" />
+        <p>
+          It is a long established fact that a reader will be distracted by
+          the readable content of a page when looking at its layout. The point
+          of using Lorem Ipsum is that it has a more-or-less normal
+          distribution of letters, as opposed to using 'Content here, content
+          here', making it look like readable English.
+        </p>
+      </div>
+      <div class="d-flex flex-row location-travel-option gap-2">
+        <img id="location-section-van-logo" alt="logo" />
+        <p>
+          It is a long established fact that a reader will be distracted by
+          the readable content of a page when looking at its layout. The point
+          of using Lorem Ipsum is that it has a more-or-less normal
+          distribution of letters, as opposed to using 'Content here, content
+          here', making it look like readable English.
+        </p>
+      </div>
+      <a class="text-decoration-none deep-blue-color" href="#">Discover more →</a>
+    </div>
+    <div class="location-map p-2">
+      <p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.043769497661!2d88.42922191540151!3d22.57746623848085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275a5466e0099%3A0x563fb49fb6394261!2sItobuz%20Technologies%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1679845522468!5m2!1sen!2sin"
+          style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </p>
+    </div>
+  </section>
+
+  <section class="travel-section d-flex position-relative gap-2">
+    <div class="d-flex flex-row travel-section-images position-relative gap-2">
+      <img id="location-section-large-travel-picture" class="large-travel-picture" alt="travel-picture" />
+      <div class="d-flex flex-column gap-2">
+        <img id="location-section-small-travel-picture-1" class="small-travel-picture" alt="travel-picture" />
+        <img id="location-section-small-travel-picture-2" class="small-travel-picture" alt="travel-picture" />
+      </div>
+    </div>
+    <div class="travel-section-details d-flex flex-column">
+      <div class="w-50">
+        <p class="text-center">SPA & WELLNESS</p>
+        <p class="fs-4 text-center">Side by Side with Nature</p>
+        <p class="text-center">
+          Find harmony and balance from the inside out and outside in. Laborum
+          accusantium libero commodi officiis itaque esse adipisci,
+          necessitatibus asperiores, illo odio.
+        </p>
+        <div class="d-flex justify-content-center">
+          <button class="rounded p-2">
+            <a class="text-decoration-none text-light" href="#">Join Us</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-4 update-section d-flex flex-column justify-content-center align-items-center">
+    <p class="deep-blue-color">STORIES DELOVERED STRAIGHT</p>
+    <p class="fs-3">Get News & Update to Your Inbox</p>
+    <div class="d-flex flex-row">
+      <input class="p-2" type="email" placeholder="Enter your email addreess ... " />
+      <button class="p-2 rounded">
+        <a class="text-decoration-none text-light p-4" href="#">Subscribe</a>
+      </button>
+    </div>
+    <p class="grey-color">
+      will be used in accordance with our
+      <a class="text-decoration-none grey-color" href="#"><u>Privacy Policy</u></a>
+    </p>
+  </section>
+
+  <img class="w-100 p-0 m-0" src="/images/footer/footerDesign.png" alt="design" />
+
+  <footer class="deep-blue-background-color d-flex flex-column">
+    <div class="d-flex justify-content-around text-center">
+      <div class="d-flex flex-column p-2">
+        <div class="p-2 d-flex flex-column align-items-center">
+          <a class="text-decoration-none fs-6 text-light" href="#">Mikalto</a>
+          <a class="text-decoration-none navbar-subheading text-light" href="#">HOTELS & RESORTS</a>
+        </div>
+        <p class="text-light">
+          Contrary to popular belief, Lorem Ipsum is not simply random text.
+          It has roots in a piece of classical Latin literature from 45 BC,
+          making it over 2000 years old.
+        </p>
+        <div class="d-flex flex-row justify-content-around">
+          <p class="text-light fs-6">Follow us:</p>
+          <img src="/images/footer/facebookLogo.svg" alt="facebook" />
+          <img src="/images/footer/twitterLogo.svg" alt="twitter" />
+          <img src="/images/footer/instagramLogo.svg" alt="instagram" />
+          <img src="/images/footer/youtubeLogo.svg" alt="youtube" />
+        </div>
+      </div>
+      <div class="d-flex flex-column p-2">
+        <p class="fs-6 text-light">About</p>
+        <p class="p-1 m-0">
+          <a class="text-decoration-none grey-color" href="#"><u>About Us</u></a>
+        </p>
+        <p class="grey-color p-1 m-0">Careers</p>
+        <p class="grey-color p-1 m-0">Contact us</p>
+        <p class="grey-color p-1 m-0">Blog</p>
+        <p class="grey-color p-1 m-0">Gift Cards</p>
+      </div>
+      <div class="d-flex flex-column p-2">
+        <p class="fs-6 text-light">Services</p>
+        <p class="grey-color p-1 m-0">spa</p>
+        <p class="grey-color p-1 m-0">Experience</p>
+        <p class="grey-color p-1 m-0">Dining</p>
+        <p class="grey-color p-1 m-0">Event</p>
+      </div>
+      <div class="d-flex flex-column p-2">
+        <p class="fs-6 text-light">Quick Links</p>
+        <p class="grey-color p-1 m-0">Facilities</p>
+        <p class="grey-color p-1 m-0">Accomodation</p>
+        <p class="grey-color p-1 m-0">Reservation</p>
+        <p class="grey-color p-1 m-0">Why choose us</p>
+        <p class="grey-color p-1 m-0">Our Restaurant</p>
+      </div>
+      <div class="d-flex flex-column p-2">
+        <p class="fs-6 text-light">Contact Us</p>
+        <p class="grey-color pt-4 m-0">TotalFree Customer Support</p>
+        <p class="text-light p-0 m-0">(+123)1500-456-7890</p>
+        <p class="grey-color pt-4 m-0">Need Live Support</p>
+        <p class="text-light p-0 m-0">reservation@mikalto.com</p>
+      </div>
+    </div>
+    <div class="d-flex flex-row justify-content-center align-items-center">
+      <hr class="w-75" />
+    </div>
+    <div class="flex-row grey-color gap-4 px-5 position-relative select-language-footer">
+      <p>Copyright © 2022 Mikalto JWS</p>
+      <p>Privacy</p>
+      <p>Terms</p>
+      <p>Sitemap</p>
+      <div class="flex-row gap-2 p-2 position-absolute">
+        <img src="/images/footer/globe.svg" alt="globe" />
+        <select name="" id="">
+          <option value="EN">EN</option>
+        </select>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <script src="/js/main.js"></script>
+</body>
+
 </html>

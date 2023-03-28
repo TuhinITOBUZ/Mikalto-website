@@ -185,7 +185,7 @@ function handleFormSubmit(event) {
   }).then(() => {
     document.getElementById("check-in").value = null;
     document.getElementById("check-out").value = null;
-    document.getElementById("adults").value = null;
-    document.getElementById("childrens").value = null;
+    document.getElementById("adults").value = "1";
+    document.getElementById("childrens").value = "0";
   });
 }
