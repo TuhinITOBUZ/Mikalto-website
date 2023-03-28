@@ -183,6 +183,7 @@ function handleFormSubmit(event) {
     },
     body: JSON.stringify(formDetails),
   }).then(() => {
+    alert("Form submitted successfully!")
     document.getElementById("check-in").value = null;
     document.getElementById("check-out").value = null;
     document.getElementById("adults").value = "1";
