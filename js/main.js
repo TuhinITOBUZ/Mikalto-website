@@ -147,24 +147,24 @@ const slideImage = () => {
   });
 };
 
-function handleFormSubmit() {
-  let checkIn = document.getElementById("check-in").value;
-  let checkOut = document.getElementById("check-out").value;
-  let adults = document.getElementById("adults").value;
-  let childrens = document.getElementById("childrens").value;
+function handleFormSubmit(event) {
+  event.preventDefault();
   let formDetails = {
-    checkInTime : checkIn,
-    checkOutTime : checkOut,
-    adults : adults,
-    childrens : childrens,
-  }
+    checkInTime: document.getElementById("check-in").value,
+    checkOutTime: document.getElementById("check-out").value,
+    adults: document.getElementById("adults").value,
+    childrens: document.getElementById("childrens").value,
+  };
   fetch("http://localhost:5000/form-data", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-      body: JSON.stringify(formDetails),
-    }).then((res) => {
-      console.log("Request complete! response:", res);
-    });
+    method: "POST",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+    body: JSON.stringify(formDetails),
+  }).then(() => {
+    document.getElementById("check-in").value = null;
+    document.getElementById("check-out").value = null;
+    document.getElementById("adults").value = null;
+    document.getElementById("childrens").value = null;
+  });
 }
