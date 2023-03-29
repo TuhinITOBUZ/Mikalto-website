@@ -204,7 +204,7 @@ async function getDataFromBackend() {
       review3Recommendation.textContent = response.text.reviews.review3.recommendation
       review3RecommendationComment.textContent = response.text.reviews.review3.recommendationComment
 
-      setData();
+      setSliderData();
     } catch (err) {
       console.log(err);
     }
@@ -212,7 +212,7 @@ async function getDataFromBackend() {
 }
 getDataFromBackend();
 
-async function setData() {
+async function setSliderData() {
   const response = await fetch(`http://localhost:5000/`)
     .then(function (res) {
       return res.json();
@@ -282,12 +282,12 @@ const goPreviousSlide = () => {
     counter = 0;
   }
   carouselSlideImage();
-  setData();
+  setSliderData();
 };
 const goNextSlide = () => {
   counter = (counter + 1) % 3;
   carouselSlideImage();
-  setData();
+  setSliderData();
 };
 
 const carouselSlideImage = () => {
