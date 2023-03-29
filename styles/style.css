@@ -150,7 +150,7 @@ body {
   right: 2rem;
 }
 
-.slide {
+.carouselSlide {
   transition: 0.5s all ease-in-out;
 }
 
@@ -199,6 +199,10 @@ body {
 
 .reviews {
   background-color: #fffaf6;
+}
+
+.reviews img {
+  width: 20%;
 }
 
 .card {
@@ -289,6 +293,10 @@ footer hr {
   display: none !important;
 }
 
+.rating-symbol i {
+  color: #6dbc57;
+}
+
 @media screen and (min-width: 960px) {
   footer {
     padding: 0 10rem;
@@ -377,11 +385,11 @@ footer hr {
   }
 
   .services-banner>div {
-    width: 30%;
+    width: 40%;
     height: fit-content;
     position: relative;
-    padding: 4rem !important;
-    top: 1.5rem;
+    padding: 2rem !important;
+    top: 10rem;
     left: 20%;
   }
 

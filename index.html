@@ -67,13 +67,15 @@
       </div>
       <form onsubmit="handleFormSubmit(event)" id="page-banner-form"
         class="page-banner-form position-relative p-4 d-flex flex-column gap-4 align-items-center justify-content-center">
-        <p class="fs-1 text-left deep-blue-color">Search Room</p>
-        <p>Get the latest on our COVID-19 response</p>
+        <div class="w-100">
+          <p class="fs-1 text-left deep-blue-color">Search Room</p>
+          <p>Get the latest on our COVID-19 response</p>
+        </div>
         <div class="d-flex gap-2 justify-content-center gap-2 w-100">
           <div class="form-date-inputs d-flex flex-column gap-2">
             <div class="d-flex flex-row">
               <i class="fa-solid fa-calendar-days p-1"></i>
-              <label for="" class="deep-blue-color">Checkin*</label>
+              <label class="deep-blue-color">Checkin*</label>
             </div>
             <input id="check-in" type="date" placeholder="Check-in-date" type="date" class="border-0 border-bottom"
               required />
@@ -81,29 +83,42 @@
           <div class="form-date-inputs d-flex flex-column gap-2">
             <div class="d-flex flex-row">
               <i class="fa-solid fa-calendar-days p-1"></i>
-              <label for="" class="deep-blue-color">Checkout*</label>
+              <label class="deep-blue-color">Checkout*</label>
             </div>
             <input id="check-out" type="date" placeholder="Check-in-date" class="border-0 border-bottom" required />
           </div>
         </div>
         <div class="w-100 d-flex flex-column">
-          <label for="" class="deep-blue-color">Adults</label>
-          <select name="" id="adults" class="border-0 border-bottom">
+          <div class="d-flex flex-row py-2">
+            <i class="fa-solid fa-user p-1"></i>
+            <label class="deep-blue-color">Adults</label>
+          </div>
+          <select id="adults" class="border-0 border-bottom">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
           </select>
         </div>
         <div class="w-100 d-flex flex-column">
-          <label for="" class="deep-blue-color">Childeren</label>
-          <select name="" id="childrens" class="border-0 border-bottom">
+          <div class="d-flex flex-row py-2">
+            <i class="fa-solid fa-baby p-1"></i>
+            <label class="deep-blue-color">Childeren</label>
+          </div>
+          <select id="childrens" class="border-0 border-bottom">
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
           </select>
         </div>
         <button type="submit" class="page-banner-form-buttom w-100 rounded p-1">
@@ -115,15 +130,11 @@
 
   <section class="p-3 d-flex flex-wrap justify-content-around align-items-center position-relative homestay-adds">
     <div class="d-flex gap-4 flex-column w-50 homestay-adds-details">
-      <p class="deep-blue-color">WELCOME TO</p>
-      <p class="display-3">The Mikalto Luxury & Comfort Homestay</p>
-      <p>
-        welcome to our five-star hotel in Puerto de la Cruz's old town. A
-        marvellous combination of architecture, design and contemporary art.
-        32 room and 10 uniquely different suites ensure our guests' stay is
-        extra special.
+      <p id="homestay-adds-heading" class="deep-blue-color"></p>
+      <p id="homestay-adds-sub-heading" class="display-3"></p>
+      <p id="homestay-adds-details">
       </p>
-      <img class="w-50" src="/images/homestays/sign.jpg" alt="signature" />
+      <img id="signature" class="w-50" alt="signature" />
     </div>
     <div class="position-relative w-50 homestay-adds-images">
       <img class="homestay1 position-absolute" id="homestay1" alt="homestay" />
@@ -135,25 +146,24 @@
   <section class="p-4 show-rooms d-flex position-relative gap-1">
     <div class="d-flex justify-content-center show-room-details">
       <div class="w-75 d-flex flex-column justify-content-start">
-        <p>ELEGANCE AND COMFORT</p>
-        <p id="showRoomHeading" class="display-4">STANDART ROOM</p>
-        <p id="showRoomPrice">From: $150 / night</p>
+        <p></p>
+        <p id="showRoomHeading" class="display-4"></p>
+        <p id="showRoomPrice"></p>
         <p id="showRoomDetails">
-          With wide and comfortable areas and daylight pouring in from the ...
         </p>
         <div class="container">
           <div class="row">
             <div class="col">Bed:</div>
-            <div id="bed-size" class="col">Queen Size Bed</div>
+            <div id="bed-size" class="col"></div>
             <div class="w-100"></div>
             <div class="col">Capacity:</div>
-            <div id="capacity" class="col">2 adults, 1 childeren</div>
+            <div id="capacity" class="col"></div>
             <div class="w-100"></div>
             <div class="col">Room size:</div>
-            <div id="room-size" class="col">55 sqm</div>
+            <div id="room-size" class="col"></div>
             <div class="w-100"></div>
             <div class="col">View:</div>
-            <div id="hotel-view" class="col">garden view</div>
+            <div id="hotel-view" class="col"></div>
           </div>
         </div>
         <div class="d-flex justify-content-center align-item-center">
@@ -164,9 +174,9 @@
       </div>
     </div>
     <div class="show-room-pictures position-relative">
-      <img id="slide1" class="slide" alt="room" />
-      <img id="slide2" class="slide" alt="room" />
-      <img id="slide3" class="slide" alt="room" />
+      <img id="carouselSlideStandardRoom" class="carouselSlide" alt="room" />
+      <img id="carouselSlideDulexeRoom" class="carouselSlide" alt="room" />
+      <img id="carouselSlideSuperDulexeRoom" class="carouselSlide" alt="room" />
       <button class="p-2 show-room-pictures-previous-button" onclick="goPreviousSlide()">
         Previous
       </button>
@@ -178,38 +188,29 @@
 
   <section class="d-flex flex-column gap-2">
     <div class="d-flex flex-column">
-      <p class="text-center display-4">Why choose our Hostel</p>
+      <p class="text-center display-4 px-4">Why choose our Hostel</p>
       <div class="d-flex section-why-choose-our-hostel gap-4 justify-content-center align-item-center">
         <div class="p-4 m-4">
-          <img class="w-25" src="/images/ourHotel/uniqueCuisine.jpg" alt="logo" />
+          <img id="our-hostel-service-1-image" class="w-25" alt="logo" />
           <div class="d-flex flex-column">
-            <p class="fs-3">Unique cuisine</p>
-            <p>
-              We use the best ingredients to make special and really tasty
-              dihes. Choose what you want to eat every day. You order at the
-              moment.
+            <p id="our-hostel-service-1-heading" class="fs-3"></p>
+            <p id="our-hostel-service-1-details">
             </p>
           </div>
         </div>
         <div class="p-4 m-4">
-          <img class="w-25" src="/images/ourHotel/yoga.jpg" alt="logo" />
+          <img id="our-hostel-service-2-image" class="w-25" alt="logo" />
           <div class="d-flex flex-column">
-            <p class="fs-3">Yoga & Gym</p>
-            <p>
-              Sauna and solarium, a fitness corner, bicycle and Mikalto
-              Walking poles available. To stay in shape especially on
-              vaccation.
+            <p id="our-hostel-service-2-heading" class="fs-3"></p>
+            <p id="our-hostel-service-2-details">
             </p>
           </div>
         </div>
         <div class="p-4 m-4">
-          <img class="w-25" src="/images/ourHotel/location.jpg" alt="logo" />
+          <img id="our-hostel-service-3-image" class="w-25" alt="logo" />
           <div class="d-flex flex-column">
-            <p class="fs-3">Perfect Location</p>
-            <p>
-              The hotel is location near sone of the most beautiful sandy
-              beaches. This is the hotel to book if you plan to spend a great
-              deal of time.
+            <p id="our-hostel-service-3-heading" class="fs-3"></p>
+            <p id="our-hostel-service-3-details">
             </p>
           </div>
         </div>
@@ -223,15 +224,10 @@
         <p>OTHER ACTIVITIES</p>
         <p class="display-4">Give yourself a smile- Smile & Wellness</p>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text
-          ever since the 1500s, when an unknown printer took a galley of type
-          and scrambled it to make a type specimen book. It has survived not
-          only five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s
-          with the release of Letraset sheets containing Lorem Ipsum passages,
-          and more recently with desktop publishing software like Aldus
-          PageMaker including versions of Lorem Ipsum.
+          Proin nec leo vel metus faucibus vehicula. Donec vulputate in magna eget egestas. Aliquam
+          ac facilisis ante, sit amet tincidunt ante. Fusce dolor sapien, sodales at velit non, lobortis
+          volutpat ante. Integer porta molestie volutpat. Etiam tristique, sem vitae tincidunt gravida,
+          eros nulla dapibus lacus, ut dapibus diam dui vel tortor.
         </p>
         <a class="text-decoration-none text-light" href="#">Explore More </a>
       </div>
@@ -309,8 +305,10 @@
     </div>
     <div id="services-banner" class="services-banner position-relative d-flex justify-content-center align-item-center">
       <div class="d-flex flex-column p-3">
-        <p class="fs-1">Say hello</p>
-        <p class="fs-1">to a whole new you</p>
+        <div class="d-flex flex-column">
+          <p class="fs-1">Say hello</p>
+          <p class="fs-1">to a whole new you</p>
+        </div>
         <p>
           Proin me leo metus faucibus vehicla. Donec vulputate in magna eget
           egestas. Aliquam ac facilisis ante, sit amet tincidunt ante. Fusce
@@ -327,12 +325,25 @@
         <div class="col-md-4">
           <div class="card p-3 mb-2">
             <div class="d-flex flex-column">
-              <img src="/images/reviews/selenaMayer.jpg" alt="review" />
-              <p>Wonderful new year trip</p>
-              <p>
-                One of the best hotels i've ever stayed in. The stuff are very
-                friendly and helpful, they were so helpful it made me feel
-                bad. it includes use of the spa, wounderful, it has a...
+              <div class="d-flex flex-column">
+                <div class="d-flex flex-row justify-content-start">
+                  <img class="rounded-circle" id="reviewer-1-Image" alt="people">
+                  <div class="d-flex flex-column px-4">
+                    <p id="reviewer-1-name"></p>
+                    <p class="grey-color" id="review-1-date"></p>
+                  </div>
+                  <img id="review-1-logo" class="rounded-circle position-absolute end-0" alt="logo">
+                </div>
+                <div class="d-flex flex-row gap-1 p-2 py-4 rating-symbol">
+                  <i class="fa-sharp fa-solid fa-circle"></i>
+                  <i class="fa-sharp fa-solid fa-circle"></i>
+                  <i class="fa-sharp fa-solid fa-circle"></i>
+                  <i class="fa-sharp fa-solid fa-circle"></i>
+                  <i class="fa-sharp fa-solid fa-circle"></i>
+                </div>
+              </div>
+              <p id="review-1-recommendation"></p>
+              <p id="review-1-recommendation-comment">
               </p>
             </div>
           </div>
@@ -340,12 +351,25 @@
         <div class="col-md-4">
           <div class="card p-3 mb-2">
             <div class="d-flex flex-column">
-              <img src="/images/reviews/estherHoward.jpg" alt="review" />
-              <p>Recommended</p>
-              <p>
-                One of the best hotels i've ever stayed in. The stuff are very
-                friendly and helpful, they were so helpful it made me feel
-                bad. it includes use of the spa, wounderful, it has a...
+              <div class="d-flex flex-column">
+                <div class="d-flex flex-row justify-content-start">
+                  <img class="rounded-circle" id="reviewer-2-Image" alt="people">
+                  <div class="d-flex flex-column px-4">
+                    <p id="reviewer-2-name"></p>
+                    <p class="grey-color" id="review-2-date"></p>
+                  </div>
+                  <img id="review-2-logo" class="rounded-circle position-absolute end-0" alt="logo">
+                </div>
+                <div class="d-flex flex-row gap-1 p-2 py-4 rating-symbol">
+                  <i class="fa-sharp fa-solid fa-circle"></i>
+                  <i class="fa-sharp fa-solid fa-circle"></i>
+                  <i class="fa-sharp fa-solid fa-circle"></i>
+                  <i class="fa-sharp fa-solid fa-circle"></i>
+                  <i class="fa-solid fa-circle-half-stroke"></i>
+                </div>
+              </div>
+              <p id="review-2-recommendation"></p>
+              <p id="review-2-recommendation-comment">
               </p>
             </div>
           </div>
@@ -353,12 +377,25 @@
         <div class="col-md-4">
           <div class="card p-3 mb-2">
             <div class="d-flex flex-column">
-              <img src="/images/reviews/janeScopper.jpg" alt="review" />
-              <p>All good</p>
-              <p>
-                One of the best hotels i've ever stayed in. The stuff are very
-                friendly and helpful, they were so helpful it made me feel
-                bad. it includes use of the spa, wounderful, it has a...
+              <div class="d-flex flex-column">
+                <div class="d-flex flex-row justify-content-start">
+                  <img class="rounded-circle" id="reviewer-3-Image" alt="people">
+                  <div class="d-flex flex-column px-4">
+                    <p id="reviewer-3-name"></p>
+                    <p class="grey-color" id="review-3-date"></p>
+                  </div>
+                  <img id="review-3-logo" class="rounded-circle position-absolute end-0" alt="logo">
+                </div>
+                <div class="d-flex flex-row gap-1 p-2 py-4 rating-symbol">
+                  <i class="fa-sharp fa-solid fa-circle"></i>
+                  <i class="fa-sharp fa-solid fa-circle"></i>
+                  <i class="fa-sharp fa-solid fa-circle"></i>
+                  <i class="fa-sharp fa-solid fa-circle"></i>
+                  <i class="fa-sharp fa-solid fa-circle"></i>
+                </div>
+              </div>
+              <p id="review-3-recommendation"></p>
+              <p id="review-3-recommendation-comment">
               </p>
             </div>
           </div>
@@ -369,7 +406,7 @@
 
   <section class="location-section d-flex py-4">
     <div class="d-flex flex-column location-travel-options">
-      <img id="location-section-logo" alt="logo" />
+      <img id="location-section-flower-logo" alt="logo" />
       <p class="deep-blue-color">GETTING HERE</p>
       <p class="display-5">How to get there?</p>
       <p>

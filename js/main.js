@@ -1,88 +1,216 @@
-const slides = document.querySelectorAll(".slide");
+const carouselSlides = document.querySelectorAll(".carouselSlide");
 const form = document.getElementById("page-banner-form");
+
+const homestayAddImage1 = document.getElementById("homestay1");
+const homestayAddImage2 = document.getElementById("homestay2");
+const homestayAddImage3 = document.getElementById("homestay3");
+const signature = document.getElementById("signature");
+
+const showRoomHeading = document.getElementById("showRoomHeading");
+const showRoomPrice = document.getElementById("showRoomPrice");
+const showRoomDetails = document.getElementById("showRoomDetails");
+const roomBedSize = document.getElementById("bed-size")
+const roomSize = document.getElementById("room-size")
+const roomView = document.getElementById("hotel-view")
+const roomCapacity = document.getElementById("capacity")
+
+const ExperienceWellnessServiceImage = document.getElementById("wellnessService")
+const ExperienceWellnessServiceHEading = document.getElementById("wellnessServiceHeading")
+const ExperienceWellnessServiceSubHeading = document.getElementById("wellnessServiceSubHeading")
+const ExperienceWellnessServiceDetails = document.getElementById("wellnessServiceDetails")
+
+const ExperienceGiftCardServiceImage = document.getElementById("giftCardService")
+const ExperienceGiftCardServiceHeading = document.getElementById("giftCardServiceHeading")
+const ExperienceGiftCardServiceSubHeading = document.getElementById("giftCardServiceSubHeading")
+const ExperienceGiftCardServiceDetails = document.getElementById("giftCardServiceDetails")
+
+const ExperienceSpaServiceImage = document.getElementById("spaService")
+const ExperienceSpaServiceHeading = document.getElementById("spaServiceHeading")
+const ExperienceSpaServiceSubHeading = document.getElementById("spaServiceSubHeading")
+const ExperienceSpaServiceDetails = document.getElementById("spaServiceDetails")
+
+const ExperienceAdventureServiceImage = document.getElementById("adventureService")
+const ExperienceAdventureServiceHeading = document.getElementById("adventureServiceHeading")
+const ExperienceAdventureServiceSubHeading = document.getElementById("adventureServiceSubHeading")
+const ExperienceAdventureServiceDetails = document.getElementById("adventureServiceDetails")
+
+const activity1 = document.getElementById("activity1");
+const activity2 = document.getElementById("activity2")
+
+const carouselSlideStandardRoomImage = document.getElementById("carouselSlideStandardRoom")
+const carouselSlideDulexeRoomImage = document.getElementById("carouselSlideDulexeRoom")
+const carouselSlideSuperDulexeRoomImage = document.getElementById("carouselSlideSuperDulexeRoom")
+
+const flowerLogo = document.getElementById("location-section-flower-logo");
+const planeLogo = document.getElementById("location-section-plane-logo")
+const busLogo = document.getElementById("location-section-bus-logo")
+const vanLogo = document.getElementById("location-section-van-logo")
+
+const locationSectionImage1 = document.getElementById("location-section-large-travel-picture")
+const locationSectionImage2 = document.getElementById("location-section-small-travel-picture-1")
+const locationSectionImage3 = document.getElementById("location-section-small-travel-picture-2")
+
+const homestayAddHeading = document.getElementById("homestay-adds-heading");
+const homestayAddSubHeading = document.getElementById("homestay-adds-sub-heading")
+const homestayAddDetails = document.getElementById("homestay-adds-details")
+
+const ourHostelService1Image = document.getElementById("our-hostel-service-1-image")
+const ourHostelService1Heading = document.getElementById("our-hostel-service-1-heading")
+const ourHostelService1Details = document.getElementById("our-hostel-service-1-details")
+
+const ourHostelService2Image = document.getElementById("our-hostel-service-2-image")
+const ourHostelService2Heading = document.getElementById("our-hostel-service-2-heading")
+const ourHostelService2Details = document.getElementById("our-hostel-service-2-details")
+
+const ourHostelService3Image = document.getElementById("our-hostel-service-3-image")
+const ourHostelService3Heading = document.getElementById("our-hostel-service-3-heading")
+const ourHostelService3Details = document.getElementById("our-hostel-service-3-details")
+
+const review1Logo = document.getElementById("review-1-logo")
+const review2Logo = document.getElementById("review-2-logo")
+const review3Logo = document.getElementById("review-3-logo")
+const reviewer1Image = document.getElementById("reviewer-1-Image")
+const reviewer1Name = document.getElementById("reviewer-1-name")
+const review1Date = document.getElementById("review-1-date")
+const review1Recommendation = document.getElementById("review-1-recommendation")
+const review1RecommendationComment = document.getElementById("review-1-recommendation-comment")
+const reviewer2Image = document.getElementById("reviewer-2-Image")
+const reviewer2Name = document.getElementById("reviewer-2-name")
+const review2Date = document.getElementById("review-2-date")
+const review2Recommendation = document.getElementById("review-2-recommendation")
+const review2RecommendationComment = document.getElementById("review-2-recommendation-comment")
+const reviewer3Image = document.getElementById("reviewer-3-Image")
+const reviewer3Name = document.getElementById("reviewer-3-name")
+const review3Date = document.getElementById("review-3-date")
+const review3Recommendation = document.getElementById("review-3-recommendation")
+const review3RecommendationComment = document.getElementById("review-3-recommendation-comment")
+
 let counter = 0;
-console.log("working")
-async function getData() {
+
+async function getDataFromBackend() {
   const response = await fetch(`http://localhost:5000/`)
-    .then(function (res) {
-      return res.json();
+    .then(function (response) {
+      return response.json();
     })
-    .catch((err) => {
-      console.log(err);
+    .catch((error) => {
+      console.log(error);
     });
   if (response.error) {
     alert(response.error.message);
   } else {
     try {
+
       document.getElementById(
         "page-banner"
       ).style.backgroundImage = `url(${response.pageBanner})`;
+
       document.getElementById(
         "services-banner"
       ).style.backgroundImage = `url(${response.servicesBanner})`;
-      document.getElementById("homestay1").src = response.homestays.homestay1;
-      document.getElementById("homestay2").src = response.homestays.homestay2;
-      document.getElementById("homestay3").src = response.homestays.homestay3;
-      document.getElementById("wellnessService").src =
+
+      homestayAddImage1.src = response.homestays.homestay1;
+      homestayAddImage2.src = response.homestays.homestay2;
+      homestayAddImage3.src = response.homestays.homestay3;
+      signature.src = response.text.homestayAdd.signature;
+
+      ExperienceWellnessServiceImage.src =
         response.wellnessService.url;
-      document.getElementById("wellnessServiceHeading").textContent =
+      ExperienceWellnessServiceHEading.textContent =
         response.wellnessService.heading;
-      document.getElementById("wellnessServiceSubHeading").textContent =
+      ExperienceWellnessServiceSubHeading.textContent =
         response.wellnessService.subHeading;
-      document.getElementById("wellnessServiceDetails").textContent =
+      ExperienceWellnessServiceDetails.textContent =
         response.wellnessService.details;
-      document.getElementById("giftCardService").src =
+      ExperienceGiftCardServiceImage.src =
         response.giftCardService.url;
-      document.getElementById("giftCardServiceHeading").textContent =
+      ExperienceGiftCardServiceHeading.textContent =
         response.giftCardService.heading;
-      document.getElementById("giftCardServiceSubHeading").textContent =
+      ExperienceGiftCardServiceSubHeading.textContent =
         response.giftCardService.subHeading;
-      document.getElementById("giftCardServiceDetails").textContent =
+      ExperienceGiftCardServiceDetails.textContent =
         response.giftCardService.details;
-      document.getElementById("spaService").src = response.spaService.url;
-      document.getElementById("spaServiceHeading").textContent =
+      ExperienceSpaServiceImage.src = response.spaService.url;
+      ExperienceSpaServiceHeading.textContent =
         response.spaService.heading;
-      document.getElementById("spaServiceSubHeading").textContent =
+      ExperienceSpaServiceSubHeading.textContent =
         response.spaService.subHeading;
-      document.getElementById("spaServiceDetails").textContent =
+      ExperienceSpaServiceDetails.textContent =
         response.spaService.details;
-      document.getElementById("adventureService").src =
+      ExperienceAdventureServiceImage.src =
         response.adventureService.url;
-      document.getElementById("adventureServiceHeading").textContent =
+      ExperienceAdventureServiceHeading.textContent =
         response.adventureService.heading;
-      document.getElementById("adventureServiceSubHeading").textContent =
+      ExperienceAdventureServiceSubHeading.textContent =
         response.adventureService.subHeading;
-      document.getElementById("adventureServiceDetails").textContent =
+      ExperienceAdventureServiceDetails.textContent =
         response.adventureService.details;
-      document.getElementById("activity1").src =
+
+      activity1.src =
         response.activities.poolActivity;
-      document.getElementById("activity2").src =
+      activity2.src =
         response.activities.forestHomestayActivity;
-      document.getElementById("slide1").src =
+
+      carouselSlideStandardRoomImage.src =
         response.showRooms.standardRoom.url;
-      document.getElementById("slide2").src = response.showRooms.dulexRoom.url;
-      document.getElementById("slide3").src =
+      carouselSlideDulexeRoomImage.src = response.showRooms.dulexRoom.url;
+      carouselSlideSuperDulexeRoomImage.src =
         response.showRooms.superDulexRoom.url;
-      document.getElementById("location-section-logo").src =
+
+      flowerLogo.src =
         response.locationSection.flowerLogo;
-      document.getElementById("location-section-plane-logo").src =
+      planeLogo.src =
         response.locationSection.planeLogo;
-      document.getElementById("location-section-bus-logo").src =
+      busLogo.src =
         response.locationSection.busLogo;
-      document.getElementById("location-section-van-logo").src =
+      vanLogo.src =
         response.locationSection.vanLogo;
-      document.getElementById("location-section-large-travel-picture").src =
+      locationSectionImage1.src =
         response.locationSection.largeTravelPicture;
-      document.getElementById("location-section-small-travel-picture-1").src =
+      locationSectionImage2.src =
         response.locationSection.smallTravelPicture1;
-      document.getElementById("location-section-small-travel-picture-2").src =
+      locationSectionImage3.src =
         response.locationSection.smallTravelPicture2;
+
+      homestayAddHeading.textContent = response.text.homestayAdd.heading;
+      homestayAddSubHeading.textContent = response.text.homestayAdd.subHeading;
+      homestayAddDetails.textContent = response.text.homestayAdd.details;
+
+      ourHostelService1Image.src = response.text.ourHostelServices.service1.url;
+      ourHostelService1Heading.textContent = response.text.ourHostelServices.service1.heading;
+      ourHostelService1Details.textContent = response.text.ourHostelServices.service1.details;
+      ourHostelService2Image.src = response.text.ourHostelServices.service2.url;
+      ourHostelService2Heading.textContent = response.text.ourHostelServices.service2.heading;
+      ourHostelService2Details.textContent = response.text.ourHostelServices.service2.details;
+      ourHostelService3Image.src = response.text.ourHostelServices.service3.url;
+      ourHostelService3Heading.textContent = response.text.ourHostelServices.service3.heading;
+      ourHostelService3Details.textContent = response.text.ourHostelServices.service3.details;
+
+      review1Logo.src = response.text.reviews.logo
+      review2Logo.src = response.text.reviews.logo
+      review3Logo.src = response.text.reviews.logo
+      reviewer1Image.src = response.text.reviews.review1.picture
+      reviewer1Name.textContent = response.text.reviews.review1.name
+      review1Date.textContent = response.text.reviews.review1.date
+      review1Recommendation.textContent = response.text.reviews.review1.recommendation
+      review1RecommendationComment.textContent = response.text.reviews.review1.recommendationComment
+      reviewer2Image.src = response.text.reviews.review2.picture
+      reviewer2Name.textContent = response.text.reviews.review2.name
+      review2Date.textContent = response.text.reviews.review2.date
+      review2Recommendation.textContent = response.text.reviews.review2.recommendation
+      review2RecommendationComment.textContent = response.text.reviews.review2.recommendationComment
+      reviewer3Image.src = response.text.reviews.review3.picture
+      reviewer3Name.textContent = response.text.reviews.review3.name
+      review3Date.textContent = response.text.reviews.review3.date
+      review3Recommendation.textContent = response.text.reviews.review3.recommendation
+      review3RecommendationComment.textContent = response.text.reviews.review3.recommendationComment
+
+      setData();
     } catch (err) {
       console.log(err);
     }
   }
 }
-getData();
+getDataFromBackend();
 
 async function setData() {
   const response = await fetch(`http://localhost:5000/`)
@@ -96,56 +224,56 @@ async function setData() {
     alert(response.error.message);
   } else {
     if (counter === 0) {
-      document.getElementById("showRoomHeading").textContent =
+      showRoomHeading.textContent =
         response.showRooms.standardRoom.heading;
-      document.getElementById("showRoomPrice").textContent =
+      showRoomPrice.textContent =
         response.showRooms.standardRoom.price;
-      document.getElementById("showRoomDetails").textContent =
+      showRoomDetails.textContent =
         response.showRooms.standardRoom.details;
-      document.getElementById("bed-size").textContent =
+      roomBedSize.textContent =
         response.showRooms.standardRoom.bedSize;
-      document.getElementById("capacity").textContent =
+      roomCapacity.textContent =
         response.showRooms.standardRoom.capacity;
-      document.getElementById("room-size").textContent =
+      roomSize.textContent =
         response.showRooms.standardRoom.roomSize;
-      document.getElementById("hotel-view").textContent =
+      roomView.textContent =
         response.showRooms.standardRoom.hotelView;
     } else if (counter === 1) {
-      document.getElementById("showRoomHeading").textContent =
+      showRoomHeading.textContent =
         response.showRooms.dulexRoom.heading;
-      document.getElementById("showRoomPrice").textContent =
+      showRoomPrice.textContent =
         response.showRooms.dulexRoom.price;
-      document.getElementById("showRoomDetails").textContent =
+      showRoomDetails.textContent =
         response.showRooms.dulexRoom.details;
-      document.getElementById("bed-size").textContent =
+      roomBedSize.textContent =
         response.showRooms.dulexRoom.bedSize;
-      document.getElementById("capacity").textContent =
+      roomCapacity.textContent =
         response.showRooms.dulexRoom.capacity;
-      document.getElementById("room-size").textContent =
+      roomSize.textContent =
         response.showRooms.dulexRoom.roomSize;
-      document.getElementById("hotel-view").textContent =
+      roomView.textContent =
         response.showRooms.dulexRoom.hotelView;
     } else if (counter === 2) {
-      document.getElementById("showRoomHeading").textContent =
+      showRoomHeading.textContent =
         response.showRooms.superDulexRoom.heading;
-      document.getElementById("showRoomPrice").textContent =
+      showRoomPrice.textContent =
         response.showRooms.superDulexRoom.price;
-      document.getElementById("showRoomDetails").textContent =
+      showRoomDetails.textContent =
         response.showRooms.superDulexRoom.details;
-      document.getElementById("bed-size").textContent =
+      roomBedSize.textContent =
         response.showRooms.superDulexRoom.bedSize;
-      document.getElementById("capacity").textContent =
+      roomCapacity.textContent =
         response.showRooms.superDulexRoom.capacity;
-      document.getElementById("room-size").textContent =
+      roomSize.textContent =
         response.showRooms.superDulexRoom.roomSize;
-      document.getElementById("hotel-view").textContent =
+      roomView.textContent =
         response.showRooms.superDulexRoom.hotelView;
     }
   }
 }
 
-slides.forEach((slide, index) => {
-  slide.style.left = `${index * 150}%`;
+carouselSlides.forEach((carouselSlide, index) => {
+  carouselSlide.style.left = `${index * 150}%`;
 });
 
 const goPreviousSlide = () => {
@@ -153,40 +281,38 @@ const goPreviousSlide = () => {
   if (counter < 0) {
     counter = 0;
   }
-  slideImage();
+  carouselSlideImage();
   setData();
 };
 const goNextSlide = () => {
   counter = (counter + 1) % 3;
-  slideImage();
+  carouselSlideImage();
   setData();
 };
 
-const slideImage = () => {
-  slides.forEach((slide) => {
-    slide.style.transform = `translateX(-${counter * 150}%)`;
+const carouselSlideImage = () => {
+  carouselSlides.forEach((carouselSlide) => {
+    carouselSlide.style.transform = `translateX(-${counter * 150}%)`;
   });
 };
 
 function handleFormSubmit(event) {
   event.preventDefault();
-  let formDetails = {
-    checkInTime: document.getElementById("check-in").value,
-    checkOutTime: document.getElementById("check-out").value,
-    adults: document.getElementById("adults").value,
-    childrens: document.getElementById("childrens").value,
-  };
+  const checkInTime = document.getElementById("check-in").value
+  const checkOutTime = document.getElementById("check-out").value
+  const adults = document.getElementById("adults").value
+  const childrens = document.getElementById("childrens").value
   fetch("http://localhost:5000/", {
     method: "POST",
     headers: {
       "Content-type": "application/json; charset=UTF-8",
     },
-    body: JSON.stringify(formDetails),
+    body: `id=${Date.now()}&checkInDate=${checkInTime}&checkOutDate=${checkOutTime}&noOfAdults=${adults}&noOfChildren=${childrens}`,
   }).then(() => {
-    alert("Form submitted successfully!")
     document.getElementById("check-in").value = null;
     document.getElementById("check-out").value = null;
     document.getElementById("adults").value = "1";
     document.getElementById("childrens").value = "0";
+    alert("Form submitted successfully!")
   });
 }
