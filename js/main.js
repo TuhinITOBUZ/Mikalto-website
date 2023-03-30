@@ -14,25 +14,25 @@ const roomSize = document.getElementById("room-size")
 const roomView = document.getElementById("hotel-view")
 const roomCapacity = document.getElementById("capacity")
 
-const ExperienceWellnessServiceImage = document.getElementById("wellnessService")
-const ExperienceWellnessServiceHEading = document.getElementById("wellnessServiceHeading")
-const ExperienceWellnessServiceSubHeading = document.getElementById("wellnessServiceSubHeading")
-const ExperienceWellnessServiceDetails = document.getElementById("wellnessServiceDetails")
+const experienceWellnessServiceImage = document.getElementById("wellnessService")
+const experienceWellnessServiceHEading = document.getElementById("wellnessServiceHeading")
+const experienceWellnessServiceSubHeading = document.getElementById("wellnessServiceSubHeading")
+const experienceWellnessServiceDetails = document.getElementById("wellnessServiceDetails")
 
-const ExperienceGiftCardServiceImage = document.getElementById("giftCardService")
-const ExperienceGiftCardServiceHeading = document.getElementById("giftCardServiceHeading")
-const ExperienceGiftCardServiceSubHeading = document.getElementById("giftCardServiceSubHeading")
-const ExperienceGiftCardServiceDetails = document.getElementById("giftCardServiceDetails")
+const experienceGiftCardServiceImage = document.getElementById("giftCardService")
+const experienceGiftCardServiceHeading = document.getElementById("giftCardServiceHeading")
+const experienceGiftCardServiceSubHeading = document.getElementById("giftCardServiceSubHeading")
+const experienceGiftCardServiceDetails = document.getElementById("giftCardServiceDetails")
 
-const ExperienceSpaServiceImage = document.getElementById("spaService")
-const ExperienceSpaServiceHeading = document.getElementById("spaServiceHeading")
-const ExperienceSpaServiceSubHeading = document.getElementById("spaServiceSubHeading")
-const ExperienceSpaServiceDetails = document.getElementById("spaServiceDetails")
+const experienceSpaServiceImage = document.getElementById("spaService")
+const experienceSpaServiceHeading = document.getElementById("spaServiceHeading")
+const experienceSpaServiceSubHeading = document.getElementById("spaServiceSubHeading")
+const experienceSpaServiceDetails = document.getElementById("spaServiceDetails")
 
-const ExperienceAdventureServiceImage = document.getElementById("adventureService")
-const ExperienceAdventureServiceHeading = document.getElementById("adventureServiceHeading")
-const ExperienceAdventureServiceSubHeading = document.getElementById("adventureServiceSubHeading")
-const ExperienceAdventureServiceDetails = document.getElementById("adventureServiceDetails")
+const experienceAdventureServiceImage = document.getElementById("adventureService")
+const experienceAdventureServiceHeading = document.getElementById("adventureServiceHeading")
+const experienceAdventureServiceSubHeading = document.getElementById("adventureServiceSubHeading")
+const experienceAdventureServiceDetails = document.getElementById("adventureServiceDetails")
 
 const activity1 = document.getElementById("activity1");
 const activity2 = document.getElementById("activity2")
@@ -113,36 +113,36 @@ async function getDataFromBackend() {
       homestayAddImage3.src = response.homestays.homestay3;
       signature.src = response.text.homestayAdd.signature;
 
-      ExperienceWellnessServiceImage.src =
+      experienceWellnessServiceImage.src =
         response.wellnessService.url;
-      ExperienceWellnessServiceHEading.textContent =
+      experienceWellnessServiceHEading.textContent =
         response.wellnessService.heading;
-      ExperienceWellnessServiceSubHeading.textContent =
+      experienceWellnessServiceSubHeading.textContent =
         response.wellnessService.subHeading;
-      ExperienceWellnessServiceDetails.textContent =
+      experienceWellnessServiceDetails.textContent =
         response.wellnessService.details;
-      ExperienceGiftCardServiceImage.src =
+      experienceGiftCardServiceImage.src =
         response.giftCardService.url;
-      ExperienceGiftCardServiceHeading.textContent =
+      experienceGiftCardServiceHeading.textContent =
         response.giftCardService.heading;
-      ExperienceGiftCardServiceSubHeading.textContent =
+      experienceGiftCardServiceSubHeading.textContent =
         response.giftCardService.subHeading;
-      ExperienceGiftCardServiceDetails.textContent =
+      experienceGiftCardServiceDetails.textContent =
         response.giftCardService.details;
-      ExperienceSpaServiceImage.src = response.spaService.url;
-      ExperienceSpaServiceHeading.textContent =
+      experienceSpaServiceImage.src = response.spaService.url;
+      experienceSpaServiceHeading.textContent =
         response.spaService.heading;
-      ExperienceSpaServiceSubHeading.textContent =
+      experienceSpaServiceSubHeading.textContent =
         response.spaService.subHeading;
-      ExperienceSpaServiceDetails.textContent =
+      experienceSpaServiceDetails.textContent =
         response.spaService.details;
-      ExperienceAdventureServiceImage.src =
+      experienceAdventureServiceImage.src =
         response.adventureService.url;
-      ExperienceAdventureServiceHeading.textContent =
+      experienceAdventureServiceHeading.textContent =
         response.adventureService.heading;
-      ExperienceAdventureServiceSubHeading.textContent =
+      experienceAdventureServiceSubHeading.textContent =
         response.adventureService.subHeading;
-      ExperienceAdventureServiceDetails.textContent =
+      experienceAdventureServiceDetails.textContent =
         response.adventureService.details;
 
       activity1.src =
