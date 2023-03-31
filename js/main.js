@@ -85,7 +85,7 @@ const review3Date = document.getElementById("review-3-date")
 const review3Recommendation = document.getElementById("review-3-recommendation")
 const review3RecommendationComment = document.getElementById("review-3-recommendation-comment")
 
-let counter = 0;
+let slideCounter = 0;
 
 async function getDataFromBackend() {
   const response = await fetch(`http://localhost:5000/`)
@@ -223,7 +223,7 @@ async function setSliderData() {
   if (response.error) {
     alert(response.error.message);
   } else {
-    if (counter === 0) {
+    if (slideCounter === 0) {
       showRoomHeading.textContent =
         response.showRooms.standardRoom.heading;
       showRoomPrice.textContent =
@@ -238,7 +238,7 @@ async function setSliderData() {
         response.showRooms.standardRoom.roomSize;
       roomView.textContent =
         response.showRooms.standardRoom.hotelView;
-    } else if (counter === 1) {
+    } else if (slideCounter === 1) {
       showRoomHeading.textContent =
         response.showRooms.dulexRoom.heading;
       showRoomPrice.textContent =
@@ -253,7 +253,7 @@ async function setSliderData() {
         response.showRooms.dulexRoom.roomSize;
       roomView.textContent =
         response.showRooms.dulexRoom.hotelView;
-    } else if (counter === 2) {
+    } else if (slideCounter === 2) {
       showRoomHeading.textContent =
         response.showRooms.superDulexRoom.heading;
       showRoomPrice.textContent =
@@ -277,22 +277,22 @@ carouselSlides.forEach((carouselSlide, index) => {
 });
 
 const goPreviousSlide = () => {
-  counter = (counter - 1) % 3;
-  if (counter < 0) {
-    counter = 0;
+  slideCounter = (slideCounter - 1) % 3;
+  if (slideCounter < 0) {
+    slideCounter = 0;
   }
   carouselSlideImage();
   setSliderData();
 };
 const goNextSlide = () => {
-  counter = (counter + 1) % 3;
+  slideCounter = (slideCounter + 1) % 3;
   carouselSlideImage();
   setSliderData();
 };
 
 const carouselSlideImage = () => {
   carouselSlides.forEach((carouselSlide) => {
-    carouselSlide.style.transform = `translateX(-${counter * 150}%)`;
+    carouselSlide.style.transform = `translateX(-${slideCounter * 150}%)`;
   });
 };
 
