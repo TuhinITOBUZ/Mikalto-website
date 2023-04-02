@@ -8,7 +8,7 @@ body {
   font-family: "Quicksand", sans-serif !important;
 }
 
-footer>div {
+footer > div {
   flex-direction: column;
 }
 
@@ -24,9 +24,8 @@ footer img {
 footer hr {
   background-color: #666362;
   color: #666362;
-  height: 1px;
+  padding: 1px;
 }
-
 
 .navbar-subheading {
   font-size: 0.5rem;
@@ -54,7 +53,7 @@ footer hr {
   height: fit-content;
 }
 
-.page-banner-form>div {
+.page-banner-form > div {
   flex-direction: column;
 }
 
@@ -98,27 +97,13 @@ footer hr {
   width: 10%;
 }
 
-.homestay-adds-images {
-  height: 60vh;
-}
-
 .homestay1,
 .homestay2,
 .homestay3 {
+  padding: .5rem 1rem ;
+  top: 5rem;
   width: 80%;
-}
-
-.homestay1 {
-  top: 2rem;
-}
-
-.homestay2 {
-  top: 12rem;
-  left: 2rem;
-}
-
-.homestay3 {
-  top: 18rem;
+  position: relative;
 }
 
 .show-rooms {
@@ -127,8 +112,15 @@ footer hr {
 
 .show-room-details {
   background-color: #05014a;
+  position: relative;
   color: #ffffff;
-  padding: 1rem;
+  overflow-x: hidden;
+  padding: 0% 50% 160%;
+  width: 50vw;
+}
+
+.show-room-details > div {
+  position: absolute;
 }
 
 .show-room-details button {
@@ -144,17 +136,19 @@ footer hr {
 .show-room-pictures img {
   position: absolute;
   width: 100%;
-  height: 70vh;
+  height: 100%;
 }
 
 .show-room-pictures-previous-button,
 .show-room-pictures-next-button {
+  font-size: 3rem;
+  z-index: 1000;
   background: transparent;
   color: #ffffff;
   border: none;
   position: absolute;
   transition: all 0.2s ease-in-out;
-  top: 50%;
+  top: 40%;
 }
 
 .show-room-pictures-previous-button:hover,
@@ -202,6 +196,7 @@ footer hr {
 }
 
 .services-banner {
+  background-image: url("https://i.ibb.co/dBKh7XR/banner.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -209,7 +204,7 @@ footer hr {
   margin-top: 2rem;
 }
 
-.services-banner>div {
+.services-banner > div {
   background-color: #ffffff;
   width: 70%;
   height: fit-content;
@@ -244,10 +239,10 @@ footer hr {
 
 .location-travel-option img {
   width: 20%;
-  height: 20%;
+  padding: 5rem 0;
 }
 
-.location-map>p>iframe {
+.location-map > p > iframe {
   width: 100%;
   height: 40vh;
 }
@@ -271,18 +266,18 @@ footer hr {
   background-color: #05014a;
 }
 
-.update-section>div {
+.update-section > div {
   border: 0.5px solid #666362;
   padding: 0.7rem;
   width: 95%;
 }
 
-.update-section>div>input {
+.update-section > div > input {
   border: none;
   width: 80%;
 }
 
-.update-section>div>button {
+.update-section > div > button {
   background-color: #05014a;
 }
 
@@ -290,7 +285,7 @@ footer hr {
   display: flex;
 }
 
-.select-language-footer>div {
+.select-language-footer > div {
   display: none !important;
 }
 
@@ -298,12 +293,34 @@ footer hr {
   color: #6dbc57;
 }
 
+@media screen and (min-width: 475px) {
+  .show-room-details {
+    padding: 0% 50% 120%;
+  }
+  .location-travel-option img {
+    width: 20%;
+    padding: 1rem 0;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .show-room-details {
+    padding: 0% 50% 60%;
+  }
+  
+  .homestay1,
+  .homestay2,
+  .homestay3 {
+    top: 0rem;
+  }
+}
+
 @media screen and (min-width: 960px) {
   footer {
     padding: 0 10rem;
   }
 
-  footer>div {
+  footer > div {
     flex-direction: row;
   }
 
@@ -311,7 +328,7 @@ footer hr {
     width: 10%;
   }
 
-  footer>div>div {
+  footer > div > div {
     width: 15%;
   }
 
@@ -337,7 +354,7 @@ footer hr {
     left: -8%;
   }
 
-  .page-banner-form>div {
+  .page-banner-form > div {
     flex-direction: row;
   }
 
@@ -354,22 +371,25 @@ footer hr {
   }
 
   .homestay1 {
-    top: -2rem;
+    top: 2rem;
     left: 2rem;
-    width: 50%;
-    height: 45vh;
+    width: 60%;
   }
 
   .homestay2 {
-    width: 50%;
-    top: 15rem;
-    left: 15rem;
+    width: 70%;
+    top: -5rem;
+    left: 8rem;
   }
 
   .homestay3 {
-    width: 55%;
-    top: 20rem;
-    left: 3rem;
+    width: 65%;
+    top: -7rem;
+    left: 0rem;
+  }
+
+  .show-room-details {
+    padding: 0% 15% 30%;
   }
 
   .show-rooms {
@@ -397,7 +417,7 @@ footer hr {
     width: 22%;
   }
 
-  .services-banner>div {
+  .services-banner > div {
     width: 40%;
     height: fit-content;
     position: relative;
@@ -410,16 +430,11 @@ footer hr {
     flex-direction: row;
   }
 
-  .location-travel-option img {
-    width: 20%;
-    height: 35%;
-  }
-
   .location-map {
     width: 50%;
   }
 
-  .location-map>p>iframe {
+  .location-map > p > iframe {
     padding: 10% 10% 10% 0;
     width: 100%;
     height: 90vh;
@@ -446,7 +461,7 @@ footer hr {
     width: 220% !important;
   }
 
-  .update-section>div {
+  .update-section > div {
     width: 45%;
   }
 
@@ -454,8 +469,33 @@ footer hr {
     display: flex;
   }
 
-  .select-language-footer>div {
+  .select-language-footer > div {
     display: flex !important;
     right: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  
+  .services-banner > div {
+    top: 7rem;
+  }
+
+  .homestay1 {
+    top: 10rem;
+    left: 0rem;
+    width: 50%;
+  }
+
+  .homestay2 {
+    width: 60%;
+    top: -1rem;
+    left: 10rem;
+  }
+
+  .homestay3 {
+    width: 50%;
+    top: -8rem;
+    left: 3rem;
   }
 }
