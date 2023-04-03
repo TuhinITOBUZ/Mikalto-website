@@ -24,6 +24,12 @@ const locationSectionImage2 = document.getElementById(
 const locationSectionImage3 = document.getElementById(
   "location-section-small-travel-picture-2"
 );
+// const checkInDate = document.querySelector(".check-in");
+// const checkOutDate = document.querySelector(".check-out");
+const checkInDate = document.getElementById("check-in");
+const checkOutDate = document.getElementById("check-out");
+const adults = document.getElementById("adults");
+const childrens = document.getElementById("childrens");
 let slideCounter = 0;
 
 async function setPageBanner() {
@@ -48,23 +54,38 @@ async function setPageBanner() {
 }
 setPageBanner();
 
+function setFormValidation() {
+  const dateToday = new Date().toISOString().split('T')[0];
+  checkInDate.setAttribute('min', dateToday);
+  checkOutDate.setAttribute('min', dateToday)
+};
+setFormValidation()
+
+checkOutDate.addEventListener('click', () => {
+  if (checkInDate.value.length > 0) {
+    checkOutDate.setAttribute('min', checkInDate.value)
+  }
+})
+
+checkInDate.addEventListener('click', () => {
+  if (checkOutDate.value.length > 0) {
+    checkInDate.setAttribute('max', checkOutDate.value)
+  }
+})
+
 function handleFormSubmit(event) {
   event.preventDefault();
-  const checkInTime = document.getElementById("check-in").value;
-  const checkOutTime = document.getElementById("check-out").value;
-  const adults = document.getElementById("adults").value;
-  const childrens = document.getElementById("childrens").value;
   fetch("http://localhost:5000/", {
     method: "POST",
     headers: {
       "Content-type": "application/json; charset=UTF-8",
     },
-    body: `id=${Date.now()}&checkInDate=${checkInTime}&checkOutDate=${checkOutTime}&noOfAdults=${adults}&noOfChildren=${childrens}`,
+    body: `id=${Date.now()}&checkInDate=${checkInDate.value}&checkOutDate=${checkOutDate.value}&noOfAdults=${adults.value}&noOfChildren=${childrens.value}`,
   }).then(() => {
-    document.getElementById("check-in").value = null;
-    document.getElementById("check-out").value = null;
-    document.getElementById("adults").value = "1";
-    document.getElementById("childrens").value = "0";
+    checkInDate.value = null;
+    checkOutDate.value = null;
+    adults.value = "1";
+    childrens.value = "0";
     alert("Form submitted successfully!");
   });
 }
@@ -108,9 +129,8 @@ async function setSlider() {
   const sliderDetails = document.getElementById("show-room-details");
   const sliderPictures = document.getElementById("show-room-pictures");
   for (let i = 0; i < slideCounter; i++) {
-    sliderPictures.innerHTML += `<img id="carouselSlideRoom${
-      i + 1
-    }" class="carouselSlide" alt="room" />`;
+    sliderPictures.innerHTML += `<img id="carouselSlideRoom${i + 1
+      }" class="carouselSlide" alt="room" />`;
   }
   let roomCounter = 1;
   for (const values in roomDetails) {
@@ -182,9 +202,8 @@ const carouselDetailsSlide = () => {
   document
     .querySelectorAll(".show-room-details>div")
     .forEach((carouselDetailsSlide) => {
-      carouselDetailsSlide.style.transform = `translateX(-${
-        slideCounter * 150
-      }%)`;
+      carouselDetailsSlide.style.transform = `translateX(-${slideCounter * 150
+        }%)`;
     });
 };
 

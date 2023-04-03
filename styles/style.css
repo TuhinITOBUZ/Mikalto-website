@@ -8,13 +8,18 @@ body {
   font-family: "Quicksand", sans-serif !important;
 }
 
-footer > div {
+footer>div {
   flex-direction: column;
 }
 
 footer p {
   font-size: 10px;
   padding: 10px 0 0 0;
+}
+
+footer a {
+  font-size: 10px;
+  padding: 20px 0 0 0;
 }
 
 footer img {
@@ -25,6 +30,12 @@ footer hr {
   background-color: #666362;
   color: #666362;
   padding: 1px;
+}
+
+footer a:hover {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  cursor: pointer;
 }
 
 .navbar-subheading {
@@ -47,13 +58,17 @@ footer hr {
   font-size: 0.7rem;
 }
 
+.nav-link:hover {
+  border-bottom: 1px solid #666362;
+}
+
 .page-banner-form {
   background-color: white;
   width: 90%;
   height: fit-content;
 }
 
-.page-banner-form > div {
+.page-banner-form>div {
   flex-direction: column;
 }
 
@@ -79,6 +94,11 @@ footer hr {
   width: 50%;
   padding: 1rem;
   border: none;
+  transition: all .2s ease-in-out;
+}
+
+.page-banner-heading-button:hover {
+  scale: 1.1;
 }
 
 .page-banner-right-arrow {
@@ -100,7 +120,7 @@ footer hr {
 .homestay1,
 .homestay2,
 .homestay3 {
-  padding: .5rem 1rem ;
+  padding: .5rem 1rem;
   top: 5rem;
   width: 80%;
   position: relative;
@@ -119,7 +139,7 @@ footer hr {
   width: 50vw;
 }
 
-.show-room-details > div {
+.show-room-details>div {
   position: absolute;
 }
 
@@ -204,7 +224,7 @@ footer hr {
   margin-top: 2rem;
 }
 
-.services-banner > div {
+.services-banner>div {
   background-color: #ffffff;
   width: 70%;
   height: fit-content;
@@ -242,7 +262,7 @@ footer hr {
   padding: 5rem 0;
 }
 
-.location-map > p > iframe {
+.location-map>p>iframe {
   width: 100%;
   height: 40vh;
 }
@@ -266,18 +286,18 @@ footer hr {
   background-color: #05014a;
 }
 
-.update-section > div {
+.update-section>div {
   border: 0.5px solid #666362;
   padding: 0.7rem;
   width: 95%;
 }
 
-.update-section > div > input {
+.update-section>div>input {
   border: none;
   width: 80%;
 }
 
-.update-section > div > button {
+.update-section>div>button {
   background-color: #05014a;
 }
 
@@ -285,7 +305,7 @@ footer hr {
   display: flex;
 }
 
-.select-language-footer > div {
+.select-language-footer>div {
   display: none !important;
 }
 
@@ -297,6 +317,7 @@ footer hr {
   .show-room-details {
     padding: 0% 50% 120%;
   }
+
   .location-travel-option img {
     width: 20%;
     padding: 1rem 0;
@@ -307,7 +328,7 @@ footer hr {
   .show-room-details {
     padding: 0% 50% 60%;
   }
-  
+
   .homestay1,
   .homestay2,
   .homestay3 {
@@ -320,15 +341,15 @@ footer hr {
     padding: 0 10rem;
   }
 
-  footer > div {
+  footer>div {
     flex-direction: row;
   }
 
   footer img {
-    width: 10%;
+    width: 50%;
   }
 
-  footer > div > div {
+  footer>div>div {
     width: 15%;
   }
 
@@ -354,7 +375,7 @@ footer hr {
     left: -8%;
   }
 
-  .page-banner-form > div {
+  .page-banner-form>div {
     flex-direction: row;
   }
 
@@ -417,7 +438,7 @@ footer hr {
     width: 22%;
   }
 
-  .services-banner > div {
+  .services-banner>div {
     width: 40%;
     height: fit-content;
     position: relative;
@@ -434,7 +455,7 @@ footer hr {
     width: 50%;
   }
 
-  .location-map > p > iframe {
+  .location-map>p>iframe {
     padding: 10% 10% 10% 0;
     width: 100%;
     height: 90vh;
@@ -461,7 +482,7 @@ footer hr {
     width: 220% !important;
   }
 
-  .update-section > div {
+  .update-section>div {
     width: 45%;
   }
 
@@ -469,15 +490,20 @@ footer hr {
     display: flex;
   }
 
-  .select-language-footer > div {
+  .select-language-footer>div {
     display: flex !important;
     right: 0;
   }
+
+  .select-language-footer>div>a {
+    width: 30%;
+  }
+
 }
 
 @media screen and (min-width: 1024px) {
-  
-  .services-banner > div {
+
+  .services-banner>div {
     top: 7rem;
   }
 
@@ -497,5 +523,9 @@ footer hr {
     width: 50%;
     top: -8rem;
     left: 3rem;
+  }
+
+  .select-language-footer>div>a {
+    width: 20%;
   }
 }
