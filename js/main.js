@@ -24,12 +24,10 @@ const locationSectionImage2 = document.getElementById(
 const locationSectionImage3 = document.getElementById(
   "location-section-small-travel-picture-2"
 );
-// const checkInDate = document.querySelector(".check-in");
-// const checkOutDate = document.querySelector(".check-out");
 const checkInDate = document.getElementById("check-in");
 const checkOutDate = document.getElementById("check-out");
-const adults = document.getElementById("adults");
-const childrens = document.getElementById("childrens");
+const noOfAdults = document.getElementById("adults");
+const noOfChildrens = document.getElementById("childrens");
 let slideCounter = 0;
 
 async function setPageBanner() {
@@ -80,12 +78,12 @@ function handleFormSubmit(event) {
     headers: {
       "Content-type": "application/json; charset=UTF-8",
     },
-    body: `id=${Date.now()}&checkInDate=${checkInDate.value}&checkOutDate=${checkOutDate.value}&noOfAdults=${adults.value}&noOfChildren=${childrens.value}`,
+    body: `id=${Date.now()}&checkInDate=${checkInDate.value}&checkOutDate=${checkOutDate.value}&noOfAdults=${noOfAdults.value}&noOfChildren=${noOfChildrens.value}`,
   }).then(() => {
     checkInDate.value = null;
     checkOutDate.value = null;
-    adults.value = "1";
-    childrens.value = "0";
+    noOfAdults.value = "1";
+    noOfChildrens.value = "0";
     alert("Form submitted successfully!");
   });
 }
