@@ -8,7 +8,7 @@ body {
   font-family: "Quicksand", sans-serif !important;
 }
 
-footer>div {
+footer > div {
   flex-direction: column;
 }
 
@@ -68,7 +68,7 @@ footer a:hover {
   height: fit-content;
 }
 
-.page-banner-form>div {
+.page-banner-form > div {
   flex-direction: column;
 }
 
@@ -94,7 +94,7 @@ footer a:hover {
   width: 50%;
   padding: 1rem;
   border: none;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .page-banner-heading-button:hover {
@@ -120,7 +120,7 @@ footer a:hover {
 .homestay1,
 .homestay2,
 .homestay3 {
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   top: 5rem;
   width: 80%;
   position: relative;
@@ -139,7 +139,7 @@ footer a:hover {
   width: 50vw;
 }
 
-.show-room-details>div {
+.show-room-details > div {
   position: absolute;
 }
 
@@ -224,7 +224,7 @@ footer a:hover {
   margin-top: 2rem;
 }
 
-.services-banner>div {
+.services-banner > div {
   background-color: #ffffff;
   width: 70%;
   height: fit-content;
@@ -262,7 +262,7 @@ footer a:hover {
   padding: 5rem 0;
 }
 
-.location-map>p>iframe {
+.location-map > p > iframe {
   width: 100%;
   height: 40vh;
 }
@@ -286,18 +286,18 @@ footer a:hover {
   background-color: #05014a;
 }
 
-.update-section>div {
+.update-section > div {
   border: 0.5px solid #666362;
   padding: 0.7rem;
   width: 95%;
 }
 
-.update-section>div>input {
+.update-section > div > input {
   border: none;
   width: 80%;
 }
 
-.update-section>div>button {
+.update-section > div > button {
   background-color: #05014a;
 }
 
@@ -305,7 +305,7 @@ footer a:hover {
   display: flex;
 }
 
-.select-language-footer>div {
+.select-language-footer > div {
   display: none !important;
 }
 
@@ -341,7 +341,7 @@ footer a:hover {
     padding: 0 10rem;
   }
 
-  footer>div {
+  footer > div {
     flex-direction: row;
   }
 
@@ -349,7 +349,7 @@ footer a:hover {
     width: 50%;
   }
 
-  footer>div>div {
+  footer > div > div {
     width: 15%;
   }
 
@@ -375,7 +375,7 @@ footer a:hover {
     left: -8%;
   }
 
-  .page-banner-form>div {
+  .page-banner-form > div {
     flex-direction: row;
   }
 
@@ -438,7 +438,7 @@ footer a:hover {
     width: 22%;
   }
 
-  .services-banner>div {
+  .services-banner > div {
     width: 40%;
     height: fit-content;
     position: relative;
@@ -455,7 +455,7 @@ footer a:hover {
     width: 50%;
   }
 
-  .location-map>p>iframe {
+  .location-map > p > iframe {
     padding: 10% 10% 10% 0;
     width: 100%;
     height: 90vh;
@@ -482,7 +482,7 @@ footer a:hover {
     width: 220% !important;
   }
 
-  .update-section>div {
+  .update-section > div {
     width: 45%;
   }
 
@@ -490,20 +490,18 @@ footer a:hover {
     display: flex;
   }
 
-  .select-language-footer>div {
+  .select-language-footer > div {
     display: flex !important;
     right: 0;
   }
 
-  .select-language-footer>div>a {
+  .select-language-footer > div > a {
     width: 30%;
   }
-
 }
 
 @media screen and (min-width: 1024px) {
-
-  .services-banner>div {
+  .services-banner > div {
     top: 7rem;
   }
 
@@ -525,7 +523,7 @@ footer a:hover {
     left: 3rem;
   }
 
-  .select-language-footer>div>a {
+  .select-language-footer > div > a {
     width: 20%;
   }
 }

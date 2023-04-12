@@ -53,23 +53,23 @@ async function setPageBanner() {
 setPageBanner();
 
 function setFormValidation() {
-  const dateToday = new Date().toISOString().split('T')[0];
-  checkInDate.setAttribute('min', dateToday);
-  checkOutDate.setAttribute('min', dateToday)
-};
-setFormValidation()
+  const dateToday = new Date().toISOString().split("T")[0];
+  checkInDate.setAttribute("min", dateToday);
+  checkOutDate.setAttribute("min", dateToday);
+}
+setFormValidation();
 
-checkOutDate.addEventListener('click', () => {
+checkOutDate.addEventListener("click", () => {
   if (checkInDate.value.length > 0) {
-    checkOutDate.setAttribute('min', checkInDate.value)
+    checkOutDate.setAttribute("min", checkInDate.value);
   }
-})
+});
 
-checkInDate.addEventListener('click', () => {
+checkInDate.addEventListener("click", () => {
   if (checkOutDate.value.length > 0) {
-    checkInDate.setAttribute('max', checkOutDate.value)
+    checkInDate.setAttribute("max", checkOutDate.value);
   }
-})
+});
 
 function handleFormSubmit(event) {
   event.preventDefault();
@@ -78,7 +78,9 @@ function handleFormSubmit(event) {
     headers: {
       "Content-type": "application/json; charset=UTF-8",
     },
-    body: `id=${Date.now()}&checkInDate=${checkInDate.value}&checkOutDate=${checkOutDate.value}&noOfAdults=${noOfAdults.value}&noOfChildren=${noOfChildrens.value}`,
+    body: `id=${Date.now()}&checkInDate=${checkInDate.value}&checkOutDate=${
+      checkOutDate.value
+    }&noOfAdults=${noOfAdults.value}&noOfChildren=${noOfChildrens.value}`,
   }).then(() => {
     checkInDate.value = null;
     checkOutDate.value = null;
@@ -127,8 +129,9 @@ async function setSlider() {
   const sliderDetails = document.getElementById("show-room-details");
   const sliderPictures = document.getElementById("show-room-pictures");
   for (let i = 0; i < slideCounter; i++) {
-    sliderPictures.innerHTML += `<img id="carouselSlideRoom${i + 1
-      }" class="carouselSlide" alt="room" />`;
+    sliderPictures.innerHTML += `<img id="carouselSlideRoom${
+      i + 1
+    }" class="carouselSlide" alt="room" />`;
   }
   let roomCounter = 1;
   for (const values in roomDetails) {
@@ -200,8 +203,9 @@ const carouselDetailsSlide = () => {
   document
     .querySelectorAll(".show-room-details>div")
     .forEach((carouselDetailsSlide) => {
-      carouselDetailsSlide.style.transform = `translateX(-${slideCounter * 150
-        }%)`;
+      carouselDetailsSlide.style.transform = `translateX(-${
+        slideCounter * 150
+      }%)`;
     });
 };
 
@@ -319,4 +323,4 @@ async function setLocationSectionImages() {
   locationSectionImage2.src = response.location.smallTravelPicture1;
   locationSectionImage3.src = response.location.smallTravelPicture2;
 }
-setLocationSectionImages()
+setLocationSectionImages();
